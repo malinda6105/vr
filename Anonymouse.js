@@ -1669,23 +1669,23 @@ case 'got-s5':
 case 'got-s6':
 case 'got-s7':
 case 'got-s8':
-case 'inside-edge-S01':
-case 'inside-edge-S02':
-case 'invincible-S01':
-case 'legend.of.the.seeker.S01':
-case 'legend.of.the.seeker.S02':
+case 'inside-edge-s01':
+case 'inside-edge-s02':
+case 'invincible-s01':
+case 'legend.of.the.seeker.s01':
+case 'legend.of.the.seeker.s02':
 case 'money-heist-s1': 
 case 'money-heist-s3':
 case 'money-heist-s2':
-case 'money-heist--s4':
+case 'money-heist-s4':
 case 'money-heist-s5':
-case 'cobra-kai-S01':
-case 'cobra-kai-S02':
-case 'cobra-kai-S03':
-case 'cobra-kai-S04':
-case 'cobra-kai-S05':
-case 'kingdom-S01':
-case 'kingdom-S02':
+case 'cobra-kai-s01':
+case 'cobra-kai-s02':
+case 'cobra-kai-s03':
+case 'cobra-kai-s04':
+case 'cobra-kai-s05':
+case 'kingdom-s01':
+case 'kingdom-s02':
 case 'invincible-S01':
 case 'iron-man-1': {
              
@@ -1839,8 +1839,8 @@ case 'iron-man-1': {
              if (/kingdom-s01/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Kingdom.2019.S01.zip'
              if (/kingdom-s02/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Kingdom.2019.S02.zip'
 
-             if (/legend.of.the.seeker.S01/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/LEGENT%20OF%20SEEKER%20S1.zip'
-             if (/legend.of.the.seeker.S02/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Legend.of.the.Seeker.S02.zip'
+             if (/legend.of.the.seeker.s01/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/LEGENT%20OF%20SEEKER%20S1.zip'
+             if (/legend.of.the.seeker.s02/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Legend.of.the.Seeker.S02.zip'
 
              if (/money-heist-s1/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Money%20Heist%20S01.zip'
              if (/money-heist-s2/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Money%20Heist%20S02.zip'
