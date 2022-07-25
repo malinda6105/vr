@@ -1417,8 +1417,8 @@ break
 
 case 'moneyheist': case 'mh': case 'money-heist': {
                 let buttons = [
-                    {buttonId: `Money-Heist-s1`, buttonText: {displayText: '💸 S1-Money Heist'}, type: 1},
-                    {buttonId: `Money-Heist-s2`, buttonText: {displayText: '💸 S2-Money Heist'}, type: 1},
+                    {buttonId: `money-heist-s1`, buttonText: {displayText: '💸 S1-Money Heist'}, type: 1},
+                    {buttonId: `money-heist-s2`, buttonText: {displayText: '💸 S2-Money Heist'}, type: 1},
                     {buttonId: `moneyheistnext1`, buttonText: {displayText: 'NEXT ⇛'}, type: 1},
                    
 
@@ -1433,12 +1433,11 @@ case 'moneyheist': case 'mh': case 'money-heist': {
                 Anony.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
 break
-
 case 'moneyheistnext1': {
                 let buttons = [
-                    {buttonId: `Money-Heist-s3`, buttonText: {displayText: '💸 S3-Money Heist'}, type: 1},
-                    {buttonId: `Money-Heist-s4`, buttonText: {displayText: '💸 S4-Money Heist'}, type: 1},
-                    {buttonId: `Money-Heist-s5`, buttonText: {displayText: '💸 S5-Money Heist'}, type: 1},
+                    {buttonId: `money-heist-s3`, buttonText: {displayText: '💸 S3-Money Heist'}, type: 1},
+                    {buttonId: `money-heist-s4`, buttonText: {displayText: '💸 S4-Money Heist'}, type: 1},
+                    {buttonId: `money-heist-s5`, buttonText: {displayText: '💸 S5-Money Heist'}, type: 1},
                    
 
                 ]
@@ -1458,8 +1457,8 @@ break
 
 case 'InsideEdge': case 'ih': {
                 let buttons = [
-                    {buttonId: `Inside-Edge-S01`, buttonText: {displayText: '💠 Inside-Edge-S1'}, type: 1},
-                    {buttonId: `Inside-Edge-S02`, buttonText: {displayText: '💠 Inside-Edge-S2'}, type: 1},
+                    {buttonId: `inside-edge-s01`, buttonText: {displayText: '💠 Inside-Edge-S1'}, type: 1},
+                    {buttonId: `inside-edge-s02`, buttonText: {displayText: '💠 Inside-Edge-S2'}, type: 1},
                     {buttonId: `tv-s`, buttonText: {displayText: 'HOME ⇱'}, type: 1},
                    
 
@@ -1479,8 +1478,8 @@ break
 
 case 'legendoftheseeker': case 'ls': {
                 let buttons = [
-                    {buttonId: `Legend.of.the.Seeker.S01`, buttonText: {displayText: '🗡 S01 Legend of the Seeker'}, type: 1},
-                    {buttonId: `Legend.of.the.Seeker.S02`, buttonText: {displayText: '🗡 S02 Legend of the Seeker'}, type: 1},
+                    {buttonId: `legend.of.the.seeker.s01`, buttonText: {displayText: '🗡 S01 Legend of the Seeker'}, type: 1},
+                    {buttonId: `legend.of.the.seeker.s02`, buttonText: {displayText: '🗡 S02 Legend of the Seeker'}, type: 1},
                     {buttonId: `tv-s`, buttonText: {displayText: 'HOME ⇱'}, type: 1},
                    
 
@@ -1500,8 +1499,8 @@ break
              
 case 'Kingdom': case 'kd': {
                 let buttons = [
-                    {buttonId: `Kingdom-S01`, buttonText: {displayText: '⚜️ Kingdom S01'}, type: 1},
-                    {buttonId: `Kingdom-S02`, buttonText: {displayText: '⚜️ Kingdom S02'}, type: 1},
+                    {buttonId: `kingdom-s01`, buttonText: {displayText: '⚜️ Kingdom S01'}, type: 1},
+                    {buttonId: `kingdom-s02`, buttonText: {displayText: '⚜️ Kingdom S02'}, type: 1},
                     {buttonId: `tv-s`, buttonText: {displayText: 'HOME ⇱'}, type: 1},
                    
 
@@ -1521,8 +1520,8 @@ break
 
 case 'Cobra-Kai-S01': case 'ck': {
                 let buttons = [
-                    {buttonId: `Cobra-Kai-S01`, buttonText: {displayText: '🐍 Cobra Kai S01'}, type: 1},
-                    {buttonId: `Cobra-Kai-S02`, buttonText: {displayText: '🐍 Cobra Kai S02'}, type: 1},
+                    {buttonId: `cobra-kai-s01`, buttonText: {displayText: '🐍 Cobra Kai S01'}, type: 1},
+                    {buttonId: `cobra-kai-s02`, buttonText: {displayText: '🐍 Cobra Kai S02'}, type: 1},
                     {buttonId: `cobrakainext`, buttonText: {displayText: 'NEXT ⇛'}, type: 1},
                    
 
@@ -1540,9 +1539,9 @@ break
 
 case 'cobrakainext': {
                 let buttons = [
-                    {buttonId: `Cobra-Kai-S03`, buttonText: {displayText: '🐍 Cobra Kai S03'}, type: 1},
-                    {buttonId: `Cobra-Kai-S04`, buttonText: {displayText: '🐍 Cobra Kai S04'}, type: 1},
-                    {buttonId: `Cobra-Kai-S05`, buttonText: {displayText: '🐍 Cobra Kai S05'}, type: 1},
+                    {buttonId: `cobra-kai-s03`, buttonText: {displayText: '🐍 Cobra Kai S03'}, type: 1},
+                    {buttonId: `cobra-kai-s04`, buttonText: {displayText: '🐍 Cobra Kai S04'}, type: 1},
+                    {buttonId: `cobra-kai-s05`, buttonText: {displayText: '🐍 Cobra Kai S05'}, type: 1},
                    
 
                 ]
@@ -1670,24 +1669,24 @@ case 'got-s5':
 case 'got-s6':
 case 'got-s7':
 case 'got-s8':
-case 'Inside-Edge-S01':
-case 'Inside-Edge-S02':
-case 'Invincible-S01':
-case 'Legend.of.the.Seeker.S01':
-case 'Legend.of.the.Seeker.S02':
-case 'Money-Heist-s1':
-case 'Money-Heist-s3':
-case 'Money-Heist-s2':
-case 'Money-Heist-s4':
-case 'Money-Heist-s5':
-case 'Cobra-Kai-S01':
-case 'Cobra-Kai-S02':
-case 'Cobra-Kai-S03':
-case 'Cobra-Kai-S04':
-case 'Cobra-Kai-S05':
-case 'Kingdom-S01':
-case 'Kingdom-S02':
-case 'Invincible-S01':
+case 'inside-edge-S01':
+case 'inside-edge-S02':
+case 'invincible-S01':
+case 'legend.of.the.seeker.S01':
+case 'legend.of.the.seeker.S02':
+case 'money-heist-s1': 
+case 'money-heist-s3':
+case 'money-heist-s2':
+case 'money-heist--s4':
+case 'money-heist-s5':
+case 'cobra-kai-S01':
+case 'cobra-kai-S02':
+case 'cobra-kai-S03':
+case 'cobra-kai-S04':
+case 'cobra-kai-S05':
+case 'kingdom-S01':
+case 'kingdom-S02':
+case 'invincible-S01':
 case 'iron-man-1': {
              
              let link
@@ -1823,7 +1822,7 @@ case 'iron-man-1': {
              if (/heropanti-2014/.test(command)) link = 'https://www.baiscopelk.com/Downloads/heropanti-2014/'
              if (/heropanti-2/.test(command)) link = 'https://cineru.lk/wp-content/uploads/2022/05/Heropanti-2-2022-Sinhala-Subtitles.zip'
 	
-	         if (/got-s1/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/GOT%20S1.zip'
+	     if (/got-s1/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/GOT%20S1.zip'
              if (/got-s2/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/GOT%20S2.zip'
              if (/got-s3/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/GOT%20S3.zip'
              if (/got-s4/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/GOT%20S4.zip'
@@ -1831,26 +1830,26 @@ case 'iron-man-1': {
              if (/got-s6/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/GOT%20S6.zip'
              if (/got-s7/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/GOT%20S7.zip'
              
-             if (/Inside-Edge-S01/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Inside%20Edge%20S01.zip'
-             if (/Inside-Edge-S02/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Inside%20Edge%20S02.zip'
+             if (/inside-edge-s01/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Inside%20Edge%20S01.zip'
+             if (/inside-edge-s02/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Inside%20Edge%20S02.zip'
            
 
-	         if (/Invincible-S01/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Invincible.2021.S01.zip'
+	     if (/invincible-s01/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Invincible.2021.S01.zip'
 
-             if (/Kingdom-S01/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Kingdom.2019.S01.zip'
-             if (/Kingdom-S02/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Kingdom.2019.S02.zip'
+             if (/kingdom-s01/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Kingdom.2019.S01.zip'
+             if (/kingdom-s02/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Kingdom.2019.S02.zip'
 
-             if (/Legend.of.the.Seeker.S01/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/LEGENT%20OF%20SEEKER%20S1.zip'
-             if (/Legend.of.the.Seeker.S02/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Legend.of.the.Seeker.S02.zip'
+             if (/legend.of.the.seeker.S01/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/LEGENT%20OF%20SEEKER%20S1.zip'
+             if (/legend.of.the.seeker.S02/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Legend.of.the.Seeker.S02.zip'
 
-             if (/Money-Heist-s1/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Money%20Heist%20S01.zip'
-             if (/Money-Heist-s2/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Money%20Heist%20S02.zip'
-             if (/Money-Heist-s3/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Money_Heist_S03.zip'
-             if (/Money-Heist-s4/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Money%20Heist%20S04.zip'
-             if (/Money-Heist-s5/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Money%20Heist%20S05.zip'
+             if (/money-heist-s1/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Money%20Heist%20S01.zip'
+             if (/money-heist-s2/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Money%20Heist%20S02.zip'
+             if (/money-heist-s3/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Money_Heist_S03.zip'
+             if (/money-heist-s4/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Money%20Heist%20S04.zip'
+             if (/money-heist-s5/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Money%20Heist%20S05.zip'
              
-             if (/Cobra-Kai-S01/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Cobra%20Kai%20S01.zip'
-             if (/Cobra-Kai-S02/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Cobra%20Kai%20S02.zip'
+             if (/cobra-kai-s01/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Cobra%20Kai%20S01.zip'
+             if (/cobra-kai-s02/.test(command)) link = 'https://github.com/Malinda6104/subtitle/raw/main/subtitle/Tv/Cobra%20Kai%20S02.zip'
 
 
              if (/ice-age-2002/.test(command)) link = 'https://www.baiscopelk.com/Downloads/ice-age-2002/'
