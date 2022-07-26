@@ -99,7 +99,7 @@ const nexusnw = require('xfarr-api')
    const isInventoriBuruan = cekDuluHasilBuruanNya(m.sender)
    const isInventoryLimit = cekDuluJoinAdaApaKagaLimitnyaDiJson(m.sender)
    const isInventoryMonay = cekDuluJoinAdaApaKagaMonaynyaDiJson(m.sender)
-   const ikan = ['ðŸŸ','ðŸ ','ðŸ¡']   
+   const ikan = ['🐟','🐠','🐡']   
 
 //rpg database\\
  let _limit = JSON.parse(fs.readFileSync('./storage/user/limit.json'));
@@ -129,7 +129,7 @@ module.exports = Anony= async (Anony, m, chatUpdate, store) => {
     try {
         var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
         var budy = (typeof m.text == 'string' ? m.text : '')
-        var prefix = prefa ? /^[Â°â€¢Ï€Ã·Ã—Â¶âˆ†Â£Â¢â‚¬Â¥Â®â„¢+âœ“_=|~!?@#$%^&.Â©^]/gi.test(body) ? body.match(/^[Â°â€¢Ï€Ã·Ã—Â¶âˆ†Â£Â¢â‚¬Â¥Â®â„¢+âœ“_=|~!?@#$%^&.Â©^]/gi)[0] : "" : prefa ?? global.prefix
+        var prefix = prefa ? /^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi.test(body) ? body.match(/^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi)[0] : "" : prefa ?? global.prefix
         const isCmd = body.startsWith(prefix)
         const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase()
         const args = body.trim().split(/ +/).slice(1)
@@ -200,11 +200,11 @@ module.exports = Anony= async (Anony, m, chatUpdate, store) => {
 	
 	//group target \\
 const reply = (teks) => {
-            Anony.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` ðŸ” á´€É´á´É´Êá´á´á´œêœ± ðŸ”`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Anony/anony.jpg`),"sourceUrl": "https://telegra.ph/file/6852aab70c51bf2797244.jpg"}}}, { quoted: m})
+            Anony.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` 🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ 🔐`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Anony/anony.jpg`),"sourceUrl": "https://telegra.ph/file/6852aab70c51bf2797244.jpg"}}}, { quoted: m})
         }
         
         const replay = (teks) => {
-            Anony.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` ðŸ” á´€É´á´É´Êá´á´á´œêœ± ðŸ”`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Anony/anony.jpg`),"sourceUrl": "https://telegra.ph/file/6852aab70c51bf2797244.jpg"}}}, { quoted: m})
+            Anony.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` 🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ 🔐`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Anony/anony.jpg`),"sourceUrl": "https://telegra.ph/file/6852aab70c51bf2797244.jpg"}}}, { quoted: m})
         }
 	
         //Public & Self\\
@@ -243,14 +243,14 @@ const reply = (teks) => {
 	  //antilink\\
         if (db.data.chats[m.chat].antilink) {
         if (budy.match(`chat.whatsapp.com`)) {
-        reply(`ã€Œ ANTI LINK ã€\n\nYou have been detected sending a group link, sorry you will be kicked !`)
-        if (!isBotAdmins) return reply(`I Am Not An Admin, How Could I Kick Somebody Who Send Link ðŸ˜’`)
+        reply(`「 ANTI LINK 」\n\nYou have been detected sending a group link, sorry you will be kicked !`)
+        if (!isBotAdmins) return reply(`I Am Not An Admin, How Could I Kick Somebody Who Send Link 😒`)
         let gclink = (`https://chat.whatsapp.com/`+await Anony.groupInviteCode(m.chat))
         let isLinkThisGc = new RegExp(gclink, 'i')
         let isgclink = isLinkThisGc.test(m.text)
-        if (isgclink) return reply(`Group Is Installed With Anti-Link But I Won't Kick You ðŸ˜‰, Because You Sent This Group Linkâ¤ï¸`)
-        if (isAdmins) return reply(`Group Is Installed With Anti-Link But I Won't Kick You ðŸ˜‰, Because You Are An Admin Of The Groupâ¤ï¸`)
-        if (isCreator) return reply(`Group Is Installed With Anti-Link But I Won't Kick You ðŸ˜‰, Because You Are My Owner ðŸ˜˜`)
+        if (isgclink) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Sent This Group Link❤️`)
+        if (isAdmins) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Are An Admin Of The Group❤️`)
+        if (isCreator) return reply(`Group Is Installed With Anti-Link But I Won't Kick You 😉, Because You Are My Owner 😘`)
         Anony.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
         }
@@ -314,7 +314,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebaklagu[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess song', buttonText: { displayText: 'Guess The Song' }, type: 1 }], `ðŸŽ® Guess The Music ðŸŽ®\n\nCorrect Answer ðŸŽ‰\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
+                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess song', buttonText: { displayText: 'Guess The Song' }, type: 1 }], `🎮 Guess The Music 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
                 delete tebaklagu[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
@@ -323,7 +323,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = kuismath[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await reply(`ðŸŽ® Math Quiz ðŸŽ®\n\nCorrect Answer ðŸŽ‰\n\nWant To Play Again? Send ${prefix}math mode`)
+                await reply(`🎮 Math Quiz 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Send ${prefix}math mode`)
                 delete kuismath[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
@@ -332,7 +332,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebakgambar[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess picture', buttonText: { displayText: 'Guess The Picture' }, type: 1 }], `ðŸŽ® Guess The Picture ðŸŽ®\n\nCorrect Answer ðŸŽ‰\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
+                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess picture', buttonText: { displayText: 'Guess The Picture' }, type: 1 }], `🎮 Guess The Picture 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
                 delete tebakgambar[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
@@ -341,7 +341,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebakkata[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess word', buttonText: { displayText: 'Guess The Word' }, type: 1 }], `ðŸŽ® Guess The Word ðŸŽ®\n\nCorrect Answer ðŸŽ‰\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
+                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess word', buttonText: { displayText: 'Guess The Word' }, type: 1 }], `🎮 Guess The Word 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
                 delete tebakkata[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
@@ -351,7 +351,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             jawaban = caklontong[m.sender.split('@')[0]]
 	    deskripsi = caklontong_desk[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess blank', buttonText: { displayText: 'Guess The Blank' }, type: 1 }], `ðŸŽ® Guess The Blank ðŸŽ®\n\nCorrect Answer ðŸŽ‰\n*${deskripsi}*\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
+                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess blank', buttonText: { displayText: 'Guess The Blank' }, type: 1 }], `🎮 Guess The Blank 🎮\n\nCorrect Answer 🎉\n*${deskripsi}*\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
                 delete caklontong[m.sender.split('@')[0]]
 		delete caklontong_desk[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
@@ -361,7 +361,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebakkalimat[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess sentence', buttonText: { displayText: 'Guess The Sentence' }, type: 1 }], `ðŸŽ® Guess The Sentence ðŸŽ®\n\nCorrect Answer ðŸŽ‰\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
+                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess sentence', buttonText: { displayText: 'Guess The Sentence' }, type: 1 }], `🎮 Guess The Sentence 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
                 delete tebakkalimat[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
@@ -370,7 +370,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebaklirik[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess lyrics', buttonText: { displayText: 'Guess The Lyrics' }, type: 1 }], `ðŸŽ® Guess The Lyrics ðŸŽ®\n\nCorrect Answer ðŸŽ‰\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
+                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess lyrics', buttonText: { displayText: 'Guess The Lyrics' }, type: 1 }], `🎮 Guess The Lyrics 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
                 delete tebaklirik[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
@@ -379,7 +379,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebaktebakan[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess riddle', buttonText: { displayText: 'Guess The Riddle' }, type: 1 }], `ðŸŽ® Guess The Riddle ðŸŽ®\n\nCorrect Answer ðŸŽ‰\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
+                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess riddle', buttonText: { displayText: 'Guess The Riddle' }, type: 1 }], `🎮 Guess The Riddle 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
                 delete tebaktebakan[m.sender.split('@')[0]]
             } else reply('*Wrong Answer!*')
         }
@@ -388,9 +388,9 @@ ${Array.from(room.jawaban, (jawaban, index) => {
 switch(command) {
         case 'userlimit': 
 {      
-   let txt = `ã€Œ *ALL LIMIT USER* ã€\n\n`
+   let txt = `「 *ALL LIMIT USER* 」\n\n`
      for (let i of _limit){
-     txt += `âž¸ *ID :* @${i.id.split("@")[0]}\nâž¸ *Limit* : ${i.limit}\n`
+     txt += `➸ *ID :* @${i.id.split("@")[0]}\n➸ *Limit* : ${i.limit}\n`
      }
     reply(txt)       
   }
@@ -409,12 +409,11 @@ break
 case 'group': case 'link': {
       
                 const templateButtons = [
-  {index: 1, urlButton: {displayText: 'Join Our First Group ðŸ¥º', url: 'https://chat.whatsapp.com/Llq35p7Wo3DK2unG97N2Oe'}},
-  {index: 2, callButton: {displayText: 'Developer â¤ï¸', phoneNumber: '+94 77 103 9631'}},
-  {index: 3, quickReplyButton: {displayText: 'How To Get Subtitles ðŸ˜Ž', id: 'how'}},
+  {index: 1, urlButton: {displayText: 'Join Our First Group 🥺', url: 'https://chat.whatsapp.com/Llq35p7Wo3DK2unG97N2Oe'}},
+  {index: 2, callButton: {displayText: 'Developer ❤️', phoneNumber: '+94 77 103 9631'}},
+  {index: 3, quickReplyButton: {displayText: 'How To Get Subtitles 😎', id: 'how'}},
 ]
 		
-	
 
 const buttonMessage = {
 	image: {url: 'https://telegra.ph/file/e874cd0a341d48280fbfa.jpg'},
@@ -2185,7 +2184,6 @@ case 'iron-man-1': {
              break
 					
 					
-             
              
             default:
                 if (budy.startsWith('=>')) {
