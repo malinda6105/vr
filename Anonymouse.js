@@ -1,3 +1,5 @@
+
+
 require('./settings')
 const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType } = require('@adiwajshing/baileys')
 const fs = require('fs')
@@ -461,9 +463,9 @@ break
 
 
 case 'how' : {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
 	
 	let how = `ඔබට අවශ්‍ය සබ්ටයිටල්ස් ලබා ගැනීමට නම් ප්‍රතමයෙන්ම Subtitle list එකේ ඔබට අව්ශ්‍ය චිත්‍රපටයේ නම තිබේදැයි බලන්න....පසුව ඔබට අවශ්‍ය චිත්‍රපටයේ නම ඉන්ග්‍රීසි සිම්පල් අකුරු මගින් ඔබගේ චිත්‍රපටයේ නම ටයිප් කර එවන්න එවිට සින්හල සබ්ටයිටල් ඔබ වෙත ලැබෙනු ඇත.... Ex:-   (  commando  )`
 	
@@ -482,9 +484,9 @@ join this group. ✔️`)
 break
 		
 case 'subtitle': case 'subtitles': case 'sub': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `group`, buttonText: {displayText: 'How to Get Subtitles 😎'}, type: 1},
                     {buttonId: `list`, buttonText: {displayText: 'Subtitle List 🥵'}, type: 1}
@@ -504,9 +506,9 @@ break
 
             
             case 'list' : {
-            	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+            	
+
+
 	
 	let list = `${pushname} 😎 Welcome to Our Subtitle Bot
 
@@ -574,9 +576,9 @@ break
 //Harry Potter
 
 case 'harrypotter': case 'harry-potter': case 'potter': case '4': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `harrypotter1-4`, buttonText: {displayText: 'Harry Potter 1 - 4 ♠️'}, type: 1},
                     {buttonId: `harrypotter5-8`, buttonText: {displayText: 'Harry Potter 5 - 8 🔐'}, type: 1}
@@ -594,9 +596,9 @@ break
 //conjuring
 
 case 'conjuring': case '28':{
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `the-conjuring`, buttonText: {displayText: 'The Conjuring 1 ♠️'}, type: 1},
                     {buttonId: `the-conjuring-2`, buttonText: {displayText: 'The Conjuring 2 ♠️'}, type: 1},
@@ -615,9 +617,9 @@ break
 //Commando
 
 case 'commando': case '35': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `commando-2013`, buttonText: {displayText: 'Commando 1 ♠️'}, type: 1},
                     {buttonId: `commando-2`, buttonText: {displayText: 'Commando 2 🔐'}, type: 1},
@@ -636,9 +638,9 @@ join this group. ✔️`)
 break
 
 case 'harrypotter1-4': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
 	
             let harry1 = 'https://www.baiscopelk.com/Downloads/harry_potter_and_the_philosophers_stone_2001-zip/'
             let harry2 = 'https://www.baiscopelk.com/Downloads/harry-potter-and_-the_-chamber-of_-secrets-2002-zip/'
@@ -653,9 +655,9 @@ join this group. ✔️`)
              break
              
 case 'harrypotter5-8': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
 	
             let harry5 = 'https://www.baiscopelk.com/Downloads/harry-potter-and_-the_-order_-of_-the_-phoenix-2007-zip/'
             let harry6 = 'https://www.baiscopelk.com/wp-content/uploads/2017/02/Harry_Potter_and_the_Half_Blood_Prince_2009.si_.srt'
@@ -674,9 +676,9 @@ join this group. ✔️`)
 //marvel-list		
 		
 case 'marvel': case 'marvels': case 'mcu': case 'marvel-list-back': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `marvel-list`, buttonText: {displayText: 'Marvel film list ❤️'}, type: 1},
                    
@@ -693,9 +695,9 @@ join this group. ✔️`)
 break
 
 case 'marvel-list': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `spider-man`, buttonText: {displayText: 'spider man ♠️'}, type: 1},
                     {buttonId: `iron-man`, buttonText: {displayText: 'iron man 🔐'}, type: 1},
@@ -714,9 +716,9 @@ join this group. ✔️`)
 break
 
 case 'nextmarvel': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `fantastic-four`, buttonText: {displayText: 'fantastic four ♠️'}, type: 1},
                     {buttonId: `doctor-strange`, buttonText: {displayText: 'doctor strange 🔐'}, type: 1},
@@ -735,9 +737,9 @@ join this group. ✔️`)
 break
 
 case 'nextmarve2': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `guardians-of-the-galaxy`, buttonText: {displayText: 'guardians of the galaxy ♠️'}, type: 1},
                     {buttonId: `venom`, buttonText: {displayText: 'venom 🔐'}, type: 1},
@@ -757,9 +759,9 @@ break
 
 		
 case 'nextmarve3': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `x-men`, buttonText: {displayText: 'x men ♠️'}, type: 1},
                     {buttonId: `captain-america`, buttonText: {displayText: 'captain america 🔐'}, type: 1},
@@ -778,9 +780,9 @@ join this group. ✔️`)
 break
 
 case 'nextmarve4': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `morbius`, buttonText: {displayText: 'Morbius ♠️'}, type: 1},
                     {buttonId: `captain-marvel`, buttonText: {displayText: 'captain marvel 🔐'}, type: 1},
@@ -803,9 +805,9 @@ break
 
 
 case 'spider-man': case 'nexspider-0': case 'spiderman': case 'spider': case '46': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `spider-man-2002`, buttonText: {displayText: '🕷 Spider Man 1 (2002)'}, type: 1},
                     {buttonId: `spider-man-2-2004`, buttonText: {displayText: '🕷 Spider Man 2 (2004)'}, type: 1},
@@ -824,9 +826,9 @@ join this group. ✔️`)
 break
 
 case 'nexspider': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `spider-man-3-2007`, buttonText: {displayText: '🕷 Spider Man 3 (2007)'}, type: 1},
                     {buttonId: `the-amazing-spider-man-2012`, buttonText: {displayText: '🕷 The Amazing Spider Man (2012)'}, type: 1},
@@ -846,9 +848,9 @@ join this group. ✔️`)
 break
 
 case 'nexspider1': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `the-amazing-spider-man-2-2014`, buttonText: {displayText: '🕷 The Amazing Spider Man 2 (2014)'}, type: 1},
                     {buttonId: `spider-man-homecoming-2017`, buttonText: {displayText: '🕷 Spider Man Homecomming (2017)'}, type: 1},
@@ -867,9 +869,9 @@ join this group. ✔️`)
 break
 
 case 'nexspider2': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `spider-man-far-from-home-2019`, buttonText: {displayText: '🕷 Spider Man Far From Home (2019) ♠️'}, type: 1},
                     {buttonId: `spider-man-no-way-home-2021`, buttonText: {displayText: '🕷 Spider Man No Way Home (2021) 🔐'}, type: 1},
@@ -890,9 +892,9 @@ break
 //iron man
 
 case 'iron-man': case 'iron': case 'ironman': case '45':{
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `iron-man-1`, buttonText: {displayText: '🧿 Iron Man 1 (2008)'}, type: 1},
                     {buttonId: `iron-man-2`, buttonText: {displayText: '🧿 Iron Man 2 (2010)'}, type: 1},
@@ -913,9 +915,9 @@ break
 //fantastic-four
 
 case 'fantastic-four': case 'fantasticfour': case 'fantastic': case '44': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `fantastic-four-2005`, buttonText: {displayText: '♣️ Fantastic Four (2005)'}, type: 1},
                     {buttonId: `fantastic-four-2007`, buttonText: {displayText: '♣️ Fantastic Four (2007)'}, type: 1},
@@ -936,9 +938,9 @@ break
 //doctor-strange
 
 case 'doctor-strange': case 'doctorstrange': case 'doctorstrange2': case '36': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `doctor-strange-2016`, buttonText: {displayText: '🩺 Doctor strange (2016)'}, type: 1},
                     {buttonId: `doctor-strange-2`, buttonText: {displayText: '🩺 Doctor strange 2 (2022)'}, type: 1},
@@ -958,9 +960,9 @@ break
 //guardians-of-the-galaxy
 
 case 'guardians-of-the-galaxy': case 'guardiansofthegalaxy': case 'guardians': case '43': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `guardians-of-the-galaxy-2014`, buttonText: {displayText: '🪐 Guardians Of The Galaxy (2014)'}, type: 1},
                     {buttonId: `guardians-of-the-galaxy-vol-2-2017`, buttonText: {displayText: '🪐 Guardians Of The Galaxy vol 2 (2017)'}, type: 1},
@@ -980,9 +982,9 @@ break
 //venom
 
 case 'venom': case 'venom1': case 'venom2': case '42': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `venom-2018`, buttonText: {displayText: '🎃 Venom (2018)'}, type: 1},
                     {buttonId: `venom-let-there-be-carnage-2021`, buttonText: {displayText: '🎃 Venom Let There Be Carnage (2021)'}, type: 1},
@@ -1001,9 +1003,9 @@ break
 
 //capton-amrica
 case 'captain-america': case 'captainamerica': case '41': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `captain-america-2011`, buttonText: {displayText: '🔰 Captain America (2011)'}, type: 1},
                     {buttonId: `captain-america-2-2014`, buttonText: {displayText: '🔰 Captain America 2 (2010)'}, type: 1},
@@ -1023,9 +1025,9 @@ break
 //x-men
 
 case 'x-men': case 'xmen': case 'xmenindex': case '40': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `x-men-2000`, buttonText: {displayText: '💠 X Men (2000)'}, type: 1},
                     {buttonId: `x2-2003`, buttonText: {displayText: '💠 X2 (2003)'}, type: 1},
@@ -1044,9 +1046,9 @@ join this group. ✔️`)
 break
 
 case 'nexxmen': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `x-men-the-last-stand-2006`, buttonText: {displayText: '💠 X Men The Last Stand (2006)'}, type: 1},
                     {buttonId: `x-men-origins-wolverine-2009`, buttonText: {displayText: '💠 X Men Origins Wolverine (2009)'}, type: 1},
@@ -1065,9 +1067,9 @@ join this group. ✔️`)
 break
 
 case 'nexxmen1': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `x-men-first-class-2011`, buttonText: {displayText: '💠 X Men First Class (2011)'}, type: 1},
                     {buttonId: `x-men-days-of-future-past-2014`, buttonText: {displayText: '💠 X Men Days of Future Past (2014)'}, type: 1},
@@ -1086,9 +1088,9 @@ join this group. ✔️`)
 break
 
 case 'nexxmen2': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `x-men-apocalypse-2016`, buttonText: {displayText: '💠 X Men Apocalypse (2016)'}, type: 1},
                     {buttonId: `x-men-dark-phoenix-2019`, buttonText: {displayText: '💠 X Men Dark Phoenix (2019)'}, type: 1},
@@ -1109,9 +1111,9 @@ break
 //morbius
 
 case 'morbius': case '39': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `morbius-2022`, buttonText: {displayText: '♣️ Morbius (2022)'}, type: 1},
                    
@@ -1130,9 +1132,9 @@ break
 // captain-marvel
 
 case 'captain-marvel': case 'captainmarvel': case '38': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `captain-marvel-2019`, buttonText: {displayText: '♣️ Captain Marvel (2019)'}, type: 1},
                    
@@ -1150,9 +1152,9 @@ break
 
 //ice age
 case 'iceage': case 'ice-age': case 'backiceage': case '1': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `ice-age-the-great-egg-scapade-2016`, buttonText: {displayText: 'Ice Age 2016 ♠️'}, type: 1},
                     {buttonId: `ice-age-dawn-of-the-dinosaurs-2009`, buttonText: {displayText: 'Ice Age 2009 🔐'}, type: 1},
@@ -1172,9 +1174,9 @@ break
 
 
 case 'nexticeage': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `ice-age-the-meltdown-2006`, buttonText: {displayText: 'Ice Age 2006 ♠️'}, type: 1},
                     {buttonId: `ice-age-2002`, buttonText: {displayText: 'Ice Age 2002 🔐'}, type: 1},
@@ -1193,9 +1195,9 @@ join this group. ✔️`)
 break
 //heropanti
 case 'heropanti': case '2': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `heropanti-2`, buttonText: {displayText: 'Heropanti 2 ♠️'}, type: 1},
                     {buttonId: `heropanti-2014`, buttonText: {displayText: 'Heropanti 2014 🔐'}, type: 1}
@@ -1215,9 +1217,9 @@ break
 		
 //maleficent
 case 'maleficent': case '35': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `maleficent-2014`, buttonText: {displayText: 'Maleficent 2014 ♠️'}, type: 1},
                     {buttonId: `maleficent-mistress-of-evil-2019`, buttonText: {displayText: 'Maleficent Mistress of evil 2019 🔐'}, type: 1}
@@ -1238,9 +1240,9 @@ break
 		
 //avengers
 case 'avengers': case 'avengers-0': case '30':{
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `the-avengers-2012`, buttonText: {displayText: 'The Avengers 2012♠️'}, type: 1},
                     {buttonId: `avengers-age-of-ultron-2015`, buttonText: {displayText: 'Avengers Age of ultron 2015 🔐'}, type: 1},
@@ -1259,9 +1261,9 @@ join this group. ✔️`)
 break
 
 case 'nextav': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `avengers-infinity-war-2018`, buttonText: {displayText: 'Avengers Infinity war 2018♠️'}, type: 1},
                     {buttonId: `avengers-endgame-2019`, buttonText: {displayText: 'Avengers Endgame 2019 🔐'}, type: 1},
@@ -1282,9 +1284,9 @@ break
 
 //transylvania
 case 'transylvania': case 'hotel-transylvania': case 'backhotel': case 'hotel': case 'hoteltransylvania':  case '3':{
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `transylvania-2012`, buttonText: {displayText: 'Transylvania 1 ♠️'}, type: 1},
                     {buttonId: `transylvania-2`, buttonText: {displayText: 'Transylvania 2 🔐'}, type: 1},
@@ -1303,9 +1305,9 @@ join this group. ✔️`)
 break
 
 case 'nexthotel': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `transylvania-3`, buttonText: {displayText: 'Transylvania 3 ♠️'}, type: 1},
                     {buttonId: `transylvania-4`, buttonText: {displayText: 'Transylvania 4 🔐'}, type: 1},
@@ -1325,9 +1327,9 @@ break
 		
 //ghost rider
 case 'ghost-rider': case 'ghostrider': case '5': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `ghost-rider-spirit-of-vengeance-2011`, buttonText: {displayText: 'Ghost Rider 2011♠️'}, type: 1},
                     {buttonId: `ghost-rider-2007`, buttonText: {displayText: 'Ghost Rider 2007 🔐'}, type: 1}
@@ -1345,9 +1347,9 @@ join this group. ✔️`)
 break
 //dead pool
 case 'deadpool': case 'dead-pool': case '13': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `deadpool-2`, buttonText: {displayText: 'Dead Pool 2 ♠️'}, type: 1},
                     {buttonId: `deadpool-1`, buttonText: {displayText: 'Dead Pool 1 🔐'}, type: 1}
@@ -1365,9 +1367,9 @@ join this group. ✔️`)
 break
 //bhool-bhulaiyaa
 case 'bhool-bhulaiyaa': case '16': case 'bhoolbhulaiyaa' {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `bhool-bhulaiyaa-1`, buttonText: {displayText: 'Bhool Bhulaiyaa 1 ♠️'}, type: 1},
                     {buttonId: `bhool-bhulaiyaa-2`, buttonText: {displayText: 'Bhool Bhulaiyaa 2 🔐'}, type: 1}
@@ -1385,9 +1387,9 @@ join this group. ✔️`)
 break
 //annabelle
 case 'annabelle': case '19': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `annabelle-comes-home-2019`, buttonText: {displayText: 'Annabelle 2019 ♠️'}, type: 1},
                     {buttonId: `annabellecreation-2017`, buttonText: {displayText: 'Annabelle 2017 🔐'}, type: 1},
@@ -1408,9 +1410,9 @@ break
 	
 //frozen
 case 'frozen': case '6': case '7': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `frozen-2013`, buttonText: {displayText: 'frozen 1 ♠️'}, type: 1},
                     {buttonId: `olafs-frozen-adventure-2017`, buttonText: {displayText: 'olafs frozen 🔐'}, type: 1},
@@ -1432,9 +1434,9 @@ break
 	
 //transformers
 case 'transformers': case 'backtrans' :case '26': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `transformers-the-last-knight-2017`, buttonText: {displayText: 'Transformers 2017 ♠️'}, type: 1},
                     {buttonId: `transformers-age-of-extinction-2014`, buttonText: {displayText: 'Transformers 2014 🔐'}, type: 1},
@@ -1453,9 +1455,9 @@ join this group. ✔️`)
             }
 break
 case 'nexttrans': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `transformers-dark-of-the-moon-2011`, buttonText: {displayText: 'Transformers 2011 ♠️'}, type: 1},
                     {buttonId: `transformers-revenge-of-the-fallen-2009`, buttonText: {displayText: 'Transformers 2009 🔐'}, type: 1},
@@ -1473,9 +1475,9 @@ join this group. ✔️`)
             }
 break
 case 'next1trans': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `transformers-2007`, buttonText: {displayText: 'Transformers 2007 ♠️'}, type: 1},
                     {buttonId: `nexttrans`, buttonText: {displayText: 'BACK ⇚'}, type: 1},
@@ -1494,9 +1496,9 @@ join this group. ✔️`)
 break
 //thor
 case 'thor': case 'thor1': case '27': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `thor-2011`, buttonText: {displayText: 'Thor 2011 ♠️'}, type: 1},
                     {buttonId: `thor-the-dark-world-2013`, buttonText: {displayText: 'Thor 2013 🔐'}, type: 1},
@@ -1518,9 +1520,9 @@ break
 //tv-s
 
 case 'tv-s': case 'tv': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `tv-list`, buttonText: {displayText: 'TV Series list ⇗'}, type: 1},
 
@@ -1538,9 +1540,9 @@ join this group. ✔️`)
 break
 
             case 'tv-list' : {
-				if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+				
+
+
 	
 	let list = `${pushname} 😎 Welcome to Our Subtitle Bot
 
@@ -1579,9 +1581,9 @@ break
 //got-all
 
 case 'got': case 'got-0': case 'gameofthrones': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `got-s1`, buttonText: {displayText: '⚔️ GOT S1'}, type: 1},
                     {buttonId: `got-s2`, buttonText: {displayText: '⚔️ GOT S2'}, type: 1},
@@ -1600,9 +1602,9 @@ join this group. ✔️`)
 break
 
 case 'gotnext1': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `got-s3`, buttonText: {displayText: '⚔️ GOT S3'}, type: 1},
                     {buttonId: `got-s4`, buttonText: {displayText: '⚔️ GOT S4'}, type: 1},
@@ -1623,9 +1625,9 @@ break
 
 
 case 'gotnext2': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `got-s5`, buttonText: {displayText: '⚔️ GOT S5'}, type: 1},
                     {buttonId: `got-s6`, buttonText: {displayText: '⚔️ GOT S6'}, type: 1},
@@ -1644,9 +1646,9 @@ join this group. ✔️`)
 break
 
 case 'gotnext3': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `got-s7`, buttonText: {displayText: '⚔️ GOT S7'}, type: 1},
                     {buttonId: `got-s8`, buttonText: {displayText: '⚔️ GOT S8'}, type: 1},
@@ -1668,9 +1670,9 @@ break
 //money-heist
 
 case 'moneyheist': case 'mh': case 'money-heist': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `money-heist-s1`, buttonText: {displayText: '💸 S1-Money Heist'}, type: 1},
                     {buttonId: `money-heist-s2`, buttonText: {displayText: '💸 S2-Money Heist'}, type: 1},
@@ -1689,9 +1691,9 @@ join this group. ✔️`)
             }
 break
 case 'moneyheistnext1': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `money-heist-s3`, buttonText: {displayText: '💸 S3-Money Heist'}, type: 1},
                     {buttonId: `money-heist-s4`, buttonText: {displayText: '💸 S4-Money Heist'}, type: 1},
@@ -1714,9 +1716,9 @@ break
 //Inside-Edge --->
 
 case 'InsideEdge': case 'ih': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `inside-edge-s01`, buttonText: {displayText: '💠 Inside-Edge-S1'}, type: 1},
                     {buttonId: `inside-edge-s02`, buttonText: {displayText: '💠 Inside-Edge-S2'}, type: 1},
@@ -1738,9 +1740,9 @@ break
 //Legend.of.the.Seeker --->
 
 case 'legendoftheseeker': case 'ls': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `legend.of.the.seeker.s01`, buttonText: {displayText: '🗡 S01 Legend of the Seeker'}, type: 1},
                     {buttonId: `legend.of.the.seeker.s02`, buttonText: {displayText: '🗡 S02 Legend of the Seeker'}, type: 1},
@@ -1762,9 +1764,9 @@ break
 //Kingdom-all
              
 case 'Kingdom': case 'kd': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `kingdom-s01`, buttonText: {displayText: '⚜️ Kingdom S01'}, type: 1},
                     {buttonId: `kingdom-s02`, buttonText: {displayText: '⚜️ Kingdom S02'}, type: 1},
@@ -1786,9 +1788,9 @@ break
 //cobra-kai
 
 case 'Cobra-Kai-S01': case 'ck': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `cobra-kai-s01`, buttonText: {displayText: '🐍 Cobra Kai S01'}, type: 1},
                     {buttonId: `cobra-kai-s02`, buttonText: {displayText: '🐍 Cobra Kai S02'}, type: 1},
@@ -1808,9 +1810,9 @@ join this group. ✔️`)
 break
 
 case 'cobrakainext': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+	
+
+
                 let buttons = [
                     {buttonId: `cobra-kai-s03`, buttonText: {displayText: '🐍 Cobra Kai S03'}, type: 1},
                     {buttonId: `cobra-kai-s04`, buttonText: {displayText: '🐍 Cobra Kai S04'}, type: 1},
