@@ -1364,7 +1364,7 @@ join this group. ✔️`)
             }
 break
 //bhool-bhulaiyaa
-case 'bhool-bhulaiyaa': case '16': case 'bhoolbhulaiyaa' {
+case 'bhool-bhulaiyaa': case '16': case 'bhoolbhulaiyaa': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
