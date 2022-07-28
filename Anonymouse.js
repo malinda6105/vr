@@ -510,54 +510,54 @@ join this group. ✔️`)
 	
 	let list = `${pushname} 😎 Welcome to Our Subtitle Bot
 
-*??? ??????  film ??? ???? mg ????????. ??? ?????? ?? film ?? ???? subtitles ?? ?????? ??. ?? (??? ice age film ??? subtitles ?????? ??? ??? 1 type ?? sent ?? ?????.)*
+*ඔබට අවශ්‍ය  film එකේ f කේතය mg කිරිමෙන්. පසු කිමෙන් එම film එක අදාල subtitles එක ලැබෙනු ඇත. 😇 (ඔබට ice age film එකේ subtitles අවශ්‍ය නම් අංක f1 type කර sent කර යුතුය.)*
 
-1 ice-age
-2 Heropanti
-3 transylvania
-4 harrypotter
-5 ghost-rider
-6 frozen
-7 olafs-frozen-adventure-2017
-8 gangubai-kathiawadi
-9 everything-everywhere-all-at-once
-10 free-guy-2021
-11 dj-tillu
-12 don-2022
-13 deadpool
-14 bird-box
-15 black-panther
-16 bhool-bhulaiyaa
-17 bheeshma-2020
-18 aquaman-2018
-19 annabelle
-20 ford-v-ferrari-2019
-21 acharya-2022
-22 army-of-the-dead-2021
-23 12th-man
-24 watcher-2022
-25 war-2019
-26 transformers
-27 thor
-28 conjuring
-29 the-three-stooges-2012
-30 avengers
-31 the-nun-2018
-32 shiddat
-33 pushpa-the-rise
-34 maleficent
-35 commando
-36 doctor-strange-2016
-37 attack
-38 captain marvel
-39 morbius
-40 x men
-41 captain america 
-42 venom 
-43 guardians-of-the-galaxy
-44 fantastic-four
-45 iron man
-46 spider man
+f1 - ice-age
+f2 - Heropanti
+f3 - transylvania
+f4 - harrypotter
+f5 - ghost-rider
+f6 - frozen
+f7 - olafs-frozen-adventure-2017
+f8 - gangubai-kathiawadi
+f9 - everything-everywhere-all-at-once
+f10 - free-guy-2021
+f11 - dj-tillu
+f12 - don-2022
+f13 - deadpool
+f14 - bird-box
+f15 - black-panther
+f16 - bhool-bhulaiyaa
+f17 - bheeshma-2020
+f18 - aquaman-2018
+f19 - annabelle
+f20 - ford-v-ferrari-2019
+f21 - acharya-2022
+f22 - army-of-the-dead-2021
+f23 - 12th-man
+f24 - watcher-2022
+f25 - war-2019
+f26 - transformers
+f27 - thor
+f28 - conjuring
+f29 - the-three-stooges-2012
+f30 - avengers
+f31 - the-nun-2018
+f32 - shiddat
+f33 - pushpa-the-rise
+f34 - maleficent
+f35 - commando
+f36 - doctor-strange-2016
+f37 - attack
+f38 - captain marvel
+f39 - morbius
+f40 - x-men
+f41 - captain america 
+f42 - venom 
+f43 - guardians-of-the-galaxy
+f44 - fantastic-four
+f45 - iron man
+f46 - spider man
 `
 
                 let buttons = [
@@ -595,7 +595,7 @@ join this group. ✔️`)
 break
 //conjuring
 
-case 'conjuring': case '28':{
+case 'conjuring': case 'f28':{
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -616,7 +616,7 @@ join this group. ✔️`)
 break
 //Commando
 
-case 'commando': case '35': {
+case 'commando': case 'f35': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -637,7 +637,7 @@ join this group. ✔️`)
             }
 break
 
-case 'harrypotter1-4': {
+case 'harrypotter1-4': case 'f4': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -804,7 +804,7 @@ break
 //spider-man
 
 
-case 'spider-man': case 'nexspider-0': case 'spiderman': case 'spider': case '46': {
+case 'spider-man': case 'nexspider-0': case 'spiderman': case 'spider': case 'f46': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -891,7 +891,7 @@ break
 
 //iron man
 
-case 'iron-man': case 'iron': case 'ironman': case '45':{
+case 'iron-man': case 'iron': case 'ironman': case 'f45':{
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -914,7 +914,7 @@ break
 
 //fantastic-four
 
-case 'fantastic-four': case 'fantasticfour': case 'fantastic': case '44': {
+case 'fantastic-four': case 'fantasticfour': case 'fantastic': case 'f44': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -937,7 +937,7 @@ break
 
 //doctor-strange
 
-case 'doctor-strange': case 'doctorstrange': case 'doctorstrange2': case '36': {
+case 'doctor-strange': case 'doctorstrange': case 'doctorstrange2': case 'f36': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -981,7 +981,7 @@ break
 
 //venom
 
-case 'venom': case 'venom1': case 'venom2': case '42': {
+case 'venom': case 'venom1': case 'venom2': case 'f42': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -1002,7 +1002,7 @@ join this group. ✔️`)
 break
 
 //capton-amrica
-case 'captain-america': case 'captainamerica': case '41': {
+case 'captain-america': case 'captainamerica': case 'f41': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -1024,7 +1024,7 @@ join this group. ✔️`)
 break
 //x-men
 
-case 'x-men': case 'xmen': case 'xmenindex': case '40': {
+case 'x-men': case 'xmen': case 'xmenindex': case 'f40': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -1110,7 +1110,7 @@ break
 
 //morbius
 
-case 'morbius': case '39': {
+case 'morbius': case 'f39': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -1131,7 +1131,7 @@ break
 
 // captain-marvel
 
-case 'captain-marvel': case 'captainmarvel': case '38': {
+case 'captain-marvel': case 'captainmarvel': case 'f38': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -1151,7 +1151,7 @@ join this group. ✔️`)
 break
 
 //ice age
-case 'iceage': case 'ice-age': case 'backiceage': case '1': {
+case 'iceage': case 'ice-age': case 'backiceage': case 'f1': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -1194,7 +1194,7 @@ join this group. ✔️`)
             }
 break
 //heropanti
-case 'heropanti': case '2': {
+case 'heropanti': case 'f2': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -1216,7 +1216,7 @@ break
 		
 		
 //maleficent
-case 'maleficent': case '34': {
+case 'maleficent': case 'f34': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -1239,7 +1239,7 @@ break
 		
 		
 //avengers
-case 'avengers': case 'avengers-0': case '30':{
+case 'avengers': case 'avengers-0': case 'f30':{
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -1283,7 +1283,7 @@ break
 		
 
 //transylvania
-case 'transylvania': case 'hotel-transylvania': case 'backhotel': case 'hotel': case 'hoteltransylvania':  case '3':{
+case 'transylvania': case 'hotel-transylvania': case 'backhotel': case 'hotel': case 'hoteltransylvania':  case 'f3':{
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -1326,7 +1326,7 @@ join this group. ✔️`)
 break
 		
 //ghost rider
-case 'ghost-rider': case 'ghostrider': case '5': {
+case 'ghost-rider': case 'ghostrider': case 'f5': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -1346,7 +1346,7 @@ join this group. ✔️`)
             }
 break
 //dead pool
-case 'deadpool': case 'dead-pool': case '13': {
+case 'deadpool': case 'dead-pool': case 'f13': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -1366,7 +1366,7 @@ join this group. ✔️`)
             }
 break
 //bhool-bhulaiyaa
-case 'bhool-bhulaiyaa': case '16': case 'bhoolbhulaiyaa': {
+case 'bhool-bhulaiyaa': case 'f16': case 'bhoolbhulaiyaa': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -1386,7 +1386,7 @@ join this group. ✔️`)
             }
 break
 //annabelle
-case 'annabelle': case '19': {
+case 'annabelle': case 'f19': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -1409,7 +1409,7 @@ break
 	
 	
 //frozen
-case 'frozen': case '6': case '7': {
+case 'frozen': case '6': case 'f7': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -1433,7 +1433,7 @@ break
 	
 	
 //transformers
-case 'transformers': case 'backtrans' :case '26': {
+case 'transformers': case 'backtrans' :case 'f26': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -1495,7 +1495,7 @@ join this group. ✔️`)
             }
 break
 //thor
-case 'thor': case 'thor1': case '27': {
+case 'thor': case 'thor1': case 'f27': {
 	if (!m.isGroup) return replay(`Inbox not allowed ❌
 https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
 join this group. ✔️`)
@@ -1832,27 +1832,27 @@ join this group. ✔️`)
 break
 
             //Film List
-case '37':  
-case '8': 
-case '9':
-case '10':  
-case '11': 
-case '12':
-case '14':
-case '15':  
-case '17': 
-case '18':
-case '20':
-case '21':  
-case '22': 
-case '23':
-case '24':
-case '25':
-case '29':
-case '31':	
-case '32':
-case '33':
-case '37':
+case 'f37':  
+case 'f8': 
+case 'f9':
+case 'f10':  
+case 'f11': 
+case 'f12':
+case 'f14':
+case 'f15':  
+case 'f17': 
+case 'f18':
+case 'f20':
+case 'f21':  
+case 'f22': 
+case 'f23':
+case 'f24':
+case 'f25':
+case 'f29':
+case 'f31':	
+case 'f32':
+case 'f33':
+case 'f37':
 case 'attack': 
 case 'commando-2013': 
 case 'commando-2': 
@@ -1986,7 +1986,7 @@ case 'iron-man-1': {
              
              let link
              if (/attack/.test(command)) link = 'https://filebin.net/61n2qlc4tt9pl9by/Jugjugg_Jeeyo__2022__Hindi_HQ_HDRip_-_720p_-_HEVC_-_x265_-__DD_5.1_-_192Kbps__AAC__-_900MB._FilmsZilla.com_.part10.rar'
-             if (/37/.test(command)) link = 'https://www.baiscopelk.com/Downloads/ap1-2022/'
+             if (/f37/.test(command)) link = 'https://www.baiscopelk.com/Downloads/ap1-2022/'
 
              if (/commando-2013/.test(command)) link = 'https://www.baiscopelk.com/Downloads/commando-2013-2/'
              if (/commando-2/.test(command)) link = 'https://www.baiscopelk.com/Downloads/commando-2-2017-2/'
@@ -2081,12 +2081,12 @@ case 'iron-man-1': {
              if (/annabellecreation-2017/.test(command)) link = 'https://www.baiscopelk.com/Downloads/annabellecreation-2017-br-zip/'
              if (/annabelle-comes-home-2019/.test(command)) link = 'https://www.baiscopelk.com/Downloads/annabelle-comes-home-2019-br/'
 
-             if (/25/.test(command)) link = 'https://www.baiscopelk.com/Downloads/war-2019-br-zip/'
-             if (/24/.test(command)) link = 'https://www.baiscopelk.com/Downloads/watcher-2022-zip/'
-             if (/23/.test(command)) link = 'https://www.baiscopelk.com/Downloads/12th-%e0%b6%b8%e0%b7%91%e0%b6%b1%e0%b7%8a-2022-zip/'
-             if (/22/.test(command)) link = 'https://www.baiscopelk.com/Downloads/army-of-the-dead-2021/'
-             if (/21/.test(command)) link = 'https://www.baiscopelk.com/Downloads/acharya-2022-zip/'
-             if (/20/.test(command)) link = 'https://www.baiscopelk.com/Downloads/ford-v-ferrari-2019-br/'
+             if (/f25/.test(command)) link = 'https://www.baiscopelk.com/Downloads/war-2019-br-zip/'
+             if (/f24/.test(command)) link = 'https://www.baiscopelk.com/Downloads/watcher-2022-zip/'
+             if (/f23/.test(command)) link = 'https://www.baiscopelk.com/Downloads/12th-%e0%b6%b8%e0%b7%91%e0%b6%b1%e0%b7%8a-2022-zip/'
+             if (/f22/.test(command)) link = 'https://www.baiscopelk.com/Downloads/army-of-the-dead-2021/'
+             if (/f21/.test(command)) link = 'https://www.baiscopelk.com/Downloads/acharya-2022-zip/'
+             if (/f20/.test(command)) link = 'https://www.baiscopelk.com/Downloads/ford-v-ferrari-2019-br/'
 	
 
              if (/aquaman/.test(command)) link = 'https://www.baiscopelk.com/Downloads/aquaman-2018-br-zip/'
@@ -2118,14 +2118,14 @@ case 'iron-man-1': {
              if (/9/.test(command)) link = 'https://www.baiscopelk.com/Downloads/everything-everywhere-all-at-once-2022-blu-ray/'
 	
              if (/free-guy/.test(command)) link = 'https://www.baiscopelk.com/Downloads/free-guy_-2021-zip/'
-             if (/10/.test(command)) link = 'https://www.baiscopelk.com/Downloads/free-guy_-2021-zip/'
+             if (/f10/.test(command)) link = 'https://www.baiscopelk.com/Downloads/free-guy_-2021-zip/'
 
              if (/frozen-2013/.test(command)) link = 'https://www.baiscopelk.com/Downloads/frozen-2013-br/'
              if (/olafs-frozen-adventure-2017/.test(command)) link = 'https://www.baiscopelk.com/Downloads/olafs-frozen-adventure-2017/'
              if (/frozen-2-2019/.test(command)) link = 'https://www.baiscopelk.com/Downloads/frozen-ii-2019-br-zip/'
 
              if (/gangubai-kathiawadi/.test(command)) link = 'https://www.baiscopelk.com/Downloads/gk-2022/'
-             if (/8/.test(command)) link = 'https://www.baiscopelk.com/Downloads/gk-2022/'
+             if (/f8/.test(command)) link = 'https://www.baiscopelk.com/Downloads/gk-2022/'
 
              if (/ghost-rider-2007/.test(command)) link = 'https://www.baiscopelk.com/Downloads/ghost-rider-2007-blu-ray/'
              if (/ghost-rider-spirit-of-vengeance-2011/.test(command)) link = 'https://www.baiscopelk.com/Downloads/ghost-rider-spirit-of-vengeance-2011-blu-ray/'
