@@ -1966,7 +1966,6 @@ case 'iron-man-1': {
              
              let link
              if (/attack/.test(command)) link = 'https://www.baiscopelk.com/Downloads/ap1-2022/'
-             if (/37/.test(command)) link = 'https://www.baiscopelk.com/Downloads/ap1-2022/'
 
              if (/commando-2013/.test(command)) link = 'https://www.baiscopelk.com/Downloads/commando-2013-2/'
              if (/commando-2/.test(command)) link = 'https://www.baiscopelk.com/Downloads/commando-2-2017-2/'
@@ -2022,9 +2021,7 @@ case 'iron-man-1': {
              if (/pushpa-the-rise/.test(command)) link = 'https://www.baiscopelk.com/Downloads/pushpa-the-rise-2021-zip/'
              if (/shiddat/.test(command)) link = 'https://www.baiscopelk.com/Downloads/shiddat-2021/'
 
-             if (/33/.test(command)) link = 'https://www.baiscopelk.com/Downloads/pushpa-the-rise-2021-zip/'
-             if (/32/.test(command)) link = 'https://www.baiscopelk.com/Downloads/shiddat-2021/'	
-
+             
              if (/the-avengers-2012/.test(command)) link = 'https://www.baiscopelk.com/Downloads/the-avengers-2012-4/'
              if (/avengers-age-of-ultron-2015/.test(command)) link = 'https://www.baiscopelk.com/Downloads/avengers-age-of-ultron-2015-br-update/'
              if (/avengers-infinity-war-2018/.test(command)) link = 'https://www.baiscopelk.com/Downloads/201807310958-avengersinfinitywar2018-br/'
@@ -2033,9 +2030,7 @@ case 'iron-man-1': {
              if (/the-nun-2018/.test(command)) link = 'https://www.baiscopelk.com/Downloads/the-nun-2018-br_-zip/'
              if (/the-three-stooges-2012/.test(command)) link = 'https://www.baiscopelk.com/Downloads/the-three-stooges-2012/'
 
-             if (/31/.test(command)) link = 'https://www.baiscopelk.com/Downloads/the-nun-2018-br_-zip/'
-             if (/29/.test(command)) link = 'https://www.baiscopelk.com/Downloads/the-three-stooges-2012/'	
-	
+             
              if (/the-conjuring/.test(command)) link = 'https://www.baiscopelk.com/Downloads/the-conjuring-2013-2/'
              if (/the-conjuring-2/.test(command)) link = 'https://www.baiscopelk.com/Downloads/the-conjuring-2-2016-br/'
              if (/the-conjuring-3/.test(command)) link = 'https://www.baiscopelk.com/Downloads/the-conjuring-3-the-devil-made-me-do-it-2021-blu-ray/'
@@ -2061,52 +2056,35 @@ case 'iron-man-1': {
              if (/annabellecreation-2017/.test(command)) link = 'https://www.baiscopelk.com/Downloads/annabellecreation-2017-br-zip/'
              if (/annabelle-comes-home-2019/.test(command)) link = 'https://www.baiscopelk.com/Downloads/annabelle-comes-home-2019-br/'
 
-             if (/25/.test(command)) link = 'https://www.baiscopelk.com/Downloads/war-2019-br-zip/'
-             if (/24/.test(command)) link = 'https://www.baiscopelk.com/Downloads/watcher-2022-zip/'
-             if (/23/.test(command)) link = 'https://www.baiscopelk.com/Downloads/12th-%e0%b6%b8%e0%b7%91%e0%b6%b1%e0%b7%8a-2022-zip/'
-             if (/22/.test(command)) link = 'https://www.baiscopelk.com/Downloads/army-of-the-dead-2021/'
-             if (/21/.test(command)) link = 'https://www.baiscopelk.com/Downloads/acharya-2022-zip/'
-             if (/20/.test(command)) link = 'https://www.baiscopelk.com/Downloads/ford-v-ferrari-2019-br/'
-	
 
              if (/aquaman/.test(command)) link = 'https://www.baiscopelk.com/Downloads/aquaman-2018-br-zip/'
-             if (/18/.test(command)) link = 'https://www.baiscopelk.com/Downloads/aquaman-2018-br-zip/'	
              if (/bheeshma/.test(command)) link = 'https://www.baiscopelk.com/Downloads/bheeshma-2020-updated-zip/'
-	         if (/17/.test(command)) link = 'https://www.baiscopelk.com/Downloads/bheeshma-2020-updated-zip/'
-
+	         
 
              if (/bhool-bhulaiyaa-1/.test(command)) link = 'https://www.baiscopelk.com/Downloads/bhool-bhulaiyaa-2007-baiscopelk/'
              if (/bhool-bhulaiyaa-2/.test(command)) link = 'https://cineru.lk/wp-content/uploads/2022/06/Bhool-Bhulaiyaa-2-2022-Sinhala-Subtitles.zip'
 
              if (/bird-box/.test(command)) link = 'https://www.baiscopelk.com/Downloads/bird-box-2018/'
-	         if (/14/.test(command)) link = 'https://www.baiscopelk.com/Downloads/bird-box-2018/'
-             
+	       
              if (/black-panther/.test(command)) link = 'https://www.baiscopelk.com/Downloads/black-panther-2018-baiscopelk-com_-zip-2/'
-             if (/15/.test(command)) link = 'https://www.baiscopelk.com/Downloads/black-panther-2018-baiscopelk-com_-zip-2/'	
-
+             
              if (/deadpool-1/.test(command)) link = 'https://www.baiscopelk.com/Downloads/deadpool-2016-baiscopelkbr-update2-zip/'
              if (/deadpool-2/.test(command)) link = 'https://www.baiscopelk.com/Downloads/deadpool-2-2018-br-1-1-zip/'
 
              if (/dj-tillu/.test(command)) link = 'https://www.baiscopelk.com/Downloads/dj-tillu-2022-zip/'
-             if (/11/.test(command)) link = 'https://www.baiscopelk.com/Downloads/dj-tillu-2022-zip/'
              	
              if (/don/.test(command)) link = 'https://www.baiscopelk.com/Downloads/don-2022-updated-zip/'
-			 if (/12/.test(command)) link = 'https://www.baiscopelk.com/Downloads/don-2022-updated-zip/'
-	
+			 
 	
              if (/everything-everywhere-all-at-once/.test(command)) link = 'https://www.baiscopelk.com/Downloads/everything-everywhere-all-at-once-2022-blu-ray/'
-             if (/9/.test(command)) link = 'https://www.baiscopelk.com/Downloads/everything-everywhere-all-at-once-2022-blu-ray/'
 	
              if (/free-guy/.test(command)) link = 'https://www.baiscopelk.com/Downloads/free-guy_-2021-zip/'
-             if (/10/.test(command)) link = 'https://www.baiscopelk.com/Downloads/free-guy_-2021-zip/'
-
+             
              if (/frozen-2013/.test(command)) link = 'https://www.baiscopelk.com/Downloads/frozen-2013-br/'
              if (/olafs-frozen-adventure-2017/.test(command)) link = 'https://www.baiscopelk.com/Downloads/olafs-frozen-adventure-2017/'
              if (/frozen-2-2019/.test(command)) link = 'https://www.baiscopelk.com/Downloads/frozen-ii-2019-br-zip/'
 
              if (/gangubai-kathiawadi/.test(command)) link = 'https://www.baiscopelk.com/Downloads/gk-2022/'
-             if (/8/.test(command)) link = 'https://www.baiscopelk.com/Downloads/gk-2022/'
-
              if (/ghost-rider-2007/.test(command)) link = 'https://www.baiscopelk.com/Downloads/ghost-rider-2007-blu-ray/'
              if (/ghost-rider-spirit-of-vengeance-2011/.test(command)) link = 'https://www.baiscopelk.com/Downloads/ghost-rider-spirit-of-vengeance-2011-blu-ray/'
 
