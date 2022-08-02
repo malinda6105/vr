@@ -2,13 +2,10 @@ require('./settings')
 const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType } = require('@adiwajshing/baileys')
 const fs = require('fs')
 const util = require('util')
-const config = require('./config')
 const chalk = require('chalk')
 const { exec, spawn, execSync } = require("child_process")
 const axios = require('axios')
 const path = require('path')
-const maker = require('mumaker')
-const hrs = new Date().getHours({ timeZone: 'Asia/Colombo' })
 const os = require('os')
 const moment = require('moment-timezone')
 const { JSDOM } = require('jsdom')
@@ -20,11 +17,68 @@ const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, 
 const nexusnw = require('xfarr-api')
 
 //rpg function\\
-   const { addInventoriDarah, cekDuluJoinAdaApaKagaDiJson, addDarah, kurangDarah, getDarah }  = require('./storage/user/darah.js')
-   const { cekInventoryAdaAtauGak, addInventori,  addBesi, addEmas, addEmerald,addUmpan,addPotion,kurangBesi, kurangEmas, kurangEmerald, kurangUmpan,kurangPotion,getBesi, getEmas, getEmerald,getUmpan,getPotion} = require('./storage/user/alat_tukar.js')
-   const { addInventoriMonay, cekDuluJoinAdaApaKagaMonaynyaDiJson, addMonay, kurangMonay, getMonay } = require('./storage/user/monay.js')
-   const { addInventoriLimit, cekDuluJoinAdaApaKagaLimitnyaDiJson, addLimit, kurangLimit, getLimit } = require('./storage/user/limit.js')
-   const { cekDuluHasilBuruanNya, addInventoriBuruan, addIkan,addAyam, addKelinci, addDomba, addSapi,addGajah,kurangIkan,kurangAyam, kurangKelinci, kurangDomba, kurangSapi,kurangGajah,getIkan,getAyam, getKelinci, getDomba,getSapi,getGajah} = require('./storage/user/buruan.js')
+   const { 
+     addInventoriDarah, 
+      cekDuluJoinAdaApaKagaDiJson, 
+      addDarah, 
+      kurangDarah, 
+     getDarah 
+   }  = require('./storage/user/darah.js')
+   const { 
+     cekInventoryAdaAtauGak, 
+      addInventori,  
+       addBesi, 
+       addEmas, 
+       addEmerald,
+       addUmpan,
+       addPotion,
+       kurangBesi, 
+       kurangEmas, 
+       kurangEmerald, 
+       kurangUmpan,
+       kurangPotion,
+       getBesi, 
+      getEmas, 
+     getEmerald,
+     getUmpan,
+    getPotion
+   } = require('./storage/user/alat_tukar.js')
+   const { 
+    addInventoriMonay, 
+    cekDuluJoinAdaApaKagaMonaynyaDiJson, 
+    addMonay, 
+    kurangMonay, 
+   getMonay 
+   } = require('./storage/user/monay.js')
+   const { 
+    addInventoriLimit, 
+    cekDuluJoinAdaApaKagaLimitnyaDiJson, 
+    addLimit, 
+    kurangLimit, 
+    getLimit 
+   } = require('./storage/user/limit.js')
+   const { 
+    cekDuluHasilBuruanNya, 
+     addInventoriBuruan, 
+     addIkan,
+      addAyam, 
+      addKelinci, 
+      addDomba, 
+      addSapi,
+      addGajah,
+      kurangIkan,
+      kurangAyam, 
+      kurangKelinci, 
+      kurangDomba, 
+      kurangSapi,
+      kurangGajah,
+      getIkan,
+      getAyam, 
+      getKelinci, 
+      getDomba,
+     getSapi,
+    getGajah
+   } = require('./storage/user/buruan.js')
    let DarahAwal =  global.rpg.darahawal
    const isDarah = cekDuluJoinAdaApaKagaDiJson(m.sender)   
    const isCekDarah = getDarah(m.sender)
@@ -45,7 +99,7 @@ const nexusnw = require('xfarr-api')
    const isInventoriBuruan = cekDuluHasilBuruanNya(m.sender)
    const isInventoryLimit = cekDuluJoinAdaApaKagaLimitnyaDiJson(m.sender)
    const isInventoryMonay = cekDuluJoinAdaApaKagaMonaynyaDiJson(m.sender)
-   const ikan = ['⇛','🔐','❤️']   
+   const ikan = ['🐟','🐠','🐡']   
 
 //rpg database\\
  let _limit = JSON.parse(fs.readFileSync('./storage/user/limit.json'));
@@ -144,9 +198,6 @@ module.exports = Anony= async (Anony, m, chatUpdate, store) => {
             console.error(err)
         }
 	
-	//check
-	
-
 	//group target \\
 const reply = (teks) => {
             Anony.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` 🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ 🔐`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./Anony/anony.jpg`),"sourceUrl": "https://telegra.ph/file/6852aab70c51bf2797244.jpg"}}}, { quoted: m})
@@ -176,7 +227,7 @@ const reply = (teks) => {
             console.log('Limit Reseted')
         }, {
             scheduled: true,
-            timezone: "Asia/Colombo"
+            timezone: "Asia/Kolkata"
         })
         
 	//auto set bio\\
@@ -237,6 +288,102 @@ const reply = (teks) => {
         Anony.ev.emit('messages.upsert', msg)
         }
 	    
+	if (('family100'+m.chat in _family100) && isCmd) {
+            kuis = true
+            let room = _family100['family100'+m.chat]
+            let teks = budy.toLowerCase().replace(/[^\w\s\-]+/, '')
+            let isSurender = /^((me)?give up|surr?ender)$/i.test(m.text)
+            if (!isSurender) {
+                let index = room.jawaban.findIndex(v => v.toLowerCase().replace(/[^\w\s\-]+/, '') === teks)
+                if (room.terjawab[index]) return !0
+                room.terjawab[index] = m.sender
+            }
+            let isWin = room.terjawab.length === room.terjawab.filter(v => v).length
+            let caption = `
+Answer The Following Questions :\n${room.soal}\n\n\nThere Is ${room.jawaban.length} Answer ${room.jawaban.find(v => v.includes(' ')) ? `(Some Answers Have Spaces)` : ''}
+${isWin ? `All Answers Answered` : isSurender ? 'Surrender!' : ''}
+${Array.from(room.jawaban, (jawaban, index) => {
+        return isSurender || room.terjawab[index] ? `(${index + 1}) ${jawaban} ${room.terjawab[index] ? '@' + room.terjawab[index].split('@')[0] : ''}`.trim() : false
+    }).filter(v => v).join('\n')}
+    ${isSurender ? '' : `Perfect Player`}`.trim()
+            Anony.sendText(m.chat, caption, m, { contextInfo: { mentionedJid: parseMention(caption) }}).then(mes => { return _family100['family100'+m.chat].pesan = mesg }).catch(_ => _)
+            if (isWin || isSurender) delete _family100['family100'+m.chat]
+        }
+
+        if (tebaklagu.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+            kuis = true
+            jawaban = tebaklagu[m.sender.split('@')[0]]
+            if (budy.toLowerCase() == jawaban) {
+                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess song', buttonText: { displayText: 'Guess The Song' }, type: 1 }], `🎮 Guess The Music 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
+                delete tebaklagu[m.sender.split('@')[0]]
+            } else reply('*Wrong Answer!*')
+        }
+
+        if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+            kuis = true
+            jawaban = kuismath[m.sender.split('@')[0]]
+            if (budy.toLowerCase() == jawaban) {
+                await reply(`🎮 Math Quiz 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Send ${prefix}math mode`)
+                delete kuismath[m.sender.split('@')[0]]
+            } else reply('*Wrong Answer!*')
+        }
+
+        if (tebakgambar.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+            kuis = true
+            jawaban = tebakgambar[m.sender.split('@')[0]]
+            if (budy.toLowerCase() == jawaban) {
+                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess picture', buttonText: { displayText: 'Guess The Picture' }, type: 1 }], `🎮 Guess The Picture 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
+                delete tebakgambar[m.sender.split('@')[0]]
+            } else reply('*Wrong Answer!*')
+        }
+
+        if (tebakkata.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+            kuis = true
+            jawaban = tebakkata[m.sender.split('@')[0]]
+            if (budy.toLowerCase() == jawaban) {
+                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess word', buttonText: { displayText: 'Guess The Word' }, type: 1 }], `🎮 Guess The Word 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
+                delete tebakkata[m.sender.split('@')[0]]
+            } else reply('*Wrong Answer!*')
+        }
+
+        if (caklontong.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+            kuis = true
+            jawaban = caklontong[m.sender.split('@')[0]]
+	    deskripsi = caklontong_desk[m.sender.split('@')[0]]
+            if (budy.toLowerCase() == jawaban) {
+                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess blank', buttonText: { displayText: 'Guess The Blank' }, type: 1 }], `🎮 Guess The Blank 🎮\n\nCorrect Answer 🎉\n*${deskripsi}*\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
+                delete caklontong[m.sender.split('@')[0]]
+		delete caklontong_desk[m.sender.split('@')[0]]
+            } else reply('*Wrong Answer!*')
+        }
+
+        if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+            kuis = true
+            jawaban = tebakkalimat[m.sender.split('@')[0]]
+            if (budy.toLowerCase() == jawaban) {
+                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess sentence', buttonText: { displayText: 'Guess The Sentence' }, type: 1 }], `🎮 Guess The Sentence 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
+                delete tebakkalimat[m.sender.split('@')[0]]
+            } else reply('*Wrong Answer!*')
+        }
+
+        if (tebaklirik.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+            kuis = true
+            jawaban = tebaklirik[m.sender.split('@')[0]]
+            if (budy.toLowerCase() == jawaban) {
+                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess lyrics', buttonText: { displayText: 'Guess The Lyrics' }, type: 1 }], `🎮 Guess The Lyrics 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
+                delete tebaklirik[m.sender.split('@')[0]]
+            } else reply('*Wrong Answer!*')
+        }
+	    
+	if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+            kuis = true
+            jawaban = tebaktebakan[m.sender.split('@')[0]]
+            if (budy.toLowerCase() == jawaban) {
+                await Anony.sendButtonText(m.chat, [{ buttonId: 'guess riddle', buttonText: { displayText: 'Guess The Riddle' }, type: 1 }], `🎮 Guess The Riddle 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, Anony.user.name, m)
+                delete tebaktebakan[m.sender.split('@')[0]]
+            } else reply('*Wrong Answer!*')
+        }
+        
  
 switch(command) {
         case 'userlimit': 
@@ -258,12 +405,9 @@ switch(command) {
                 }
                 Anony.sendMessage(m.chat, reactionMessage)
             }
-break  
-
+break 
 case 'group': case 'link': {
-	if (!m.isGroup) return replay(`Inbox not allowed ❌
-https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
-join this group. ✔️`)
+      
                 const templateButtons = [
   {index: 1, urlButton: {displayText: 'Join Our First Group 🥺', url: 'https://chat.whatsapp.com/Llq35p7Wo3DK2unG97N2Oe'}},
   {index: 2, callButton: {displayText: 'Developer ❤️', phoneNumber: '+94 77 103 9631'}},
@@ -366,6 +510,8 @@ join this group. ✔️`)
 	
 	let list = `${pushname} 😎 Welcome to Our Subtitle Bot
 
+*??? ??????  film ??? ???? mg ????????. ??? ?????? ?? film ?? ???? subtitles ?? ?????? ??. ?? (??? ice age film ??? subtitles ?????? ??? ??? 1 type ?? sent ?? ?????.)*
+
 1 ice-age
 2 Heropanti
 3 transylvania
@@ -403,7 +549,15 @@ join this group. ✔️`)
 35 commando
 36 doctor-strange-2016
 37 attack
-
+38 captain marvel
+39 morbius
+40 x men
+41 captain america 
+42 venom 
+43 guardians-of-the-galaxy
+44 fantastic-four
+45 iron man
+46 spider man
 `
 
                 let buttons = [
@@ -583,6 +737,9 @@ join this group. ✔️`)
 break
 
 case 'nextmarve2': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `guardians-of-the-galaxy`, buttonText: {displayText: 'guardians of the galaxy ♠️'}, type: 1},
                     {buttonId: `venom`, buttonText: {displayText: 'venom 🔐'}, type: 1},
@@ -600,7 +757,11 @@ case 'nextmarve2': {
             }
 break
 
+		
 case 'nextmarve3': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `x-men`, buttonText: {displayText: 'x men ♠️'}, type: 1},
                     {buttonId: `captain-america`, buttonText: {displayText: 'captain america 🔐'}, type: 1},
@@ -619,6 +780,9 @@ case 'nextmarve3': {
 break
 
 case 'nextmarve4': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `morbius`, buttonText: {displayText: 'Morbius ♠️'}, type: 1},
                     {buttonId: `captain-marvel`, buttonText: {displayText: 'captain marvel 🔐'}, type: 1},
@@ -641,6 +805,9 @@ break
 
 
 case 'spider-man': case 'nexspider-0': case 'spiderman': case 'spider': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `spider-man-2002`, buttonText: {displayText: '🕷 Spider Man 1 (2002)'}, type: 1},
                     {buttonId: `spider-man-2-2004`, buttonText: {displayText: '🕷 Spider Man 2 (2004)'}, type: 1},
@@ -659,6 +826,9 @@ case 'spider-man': case 'nexspider-0': case 'spiderman': case 'spider': {
 break
 
 case 'nexspider': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `spider-man-3-2007`, buttonText: {displayText: '🕷 Spider Man 3 (2007)'}, type: 1},
                     {buttonId: `the-amazing-spider-man-2012`, buttonText: {displayText: '🕷 The Amazing Spider Man (2012)'}, type: 1},
@@ -678,6 +848,9 @@ case 'nexspider': {
 break
 
 case 'nexspider1': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `the-amazing-spider-man-2-2014`, buttonText: {displayText: '🕷 The Amazing Spider Man 2 (2014)'}, type: 1},
                     {buttonId: `spider-man-homecoming-2017`, buttonText: {displayText: '🕷 Spider Man Homecomming (2017)'}, type: 1},
@@ -696,6 +869,9 @@ case 'nexspider1': {
 break
 
 case 'nexspider2': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `spider-man-far-from-home-2019`, buttonText: {displayText: '🕷 Spider Man Far From Home (2019) ♠️'}, type: 1},
                     {buttonId: `spider-man-no-way-home-2021`, buttonText: {displayText: '🕷 Spider Man No Way Home (2021) 🔐'}, type: 1},
@@ -716,6 +892,9 @@ break
 //iron man
 
 case 'iron-man': case 'iron': case 'ironman': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `iron-man-1`, buttonText: {displayText: '🧿 Iron Man 1 (2008)'}, type: 1},
                     {buttonId: `iron-man-2`, buttonText: {displayText: '🧿 Iron Man 2 (2010)'}, type: 1},
@@ -735,7 +914,10 @@ break
 
 //fantastic-four
 
-case 'fantastic-four': case 'fantasticfour': case 'fantastic': {
+case 'fantastic-four': case 'fantasticfour': case 'fantastic': case '44': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `fantastic-four-2005`, buttonText: {displayText: '♣️ Fantastic Four (2005)'}, type: 1},
                     {buttonId: `fantastic-four-2007`, buttonText: {displayText: '♣️ Fantastic Four (2007)'}, type: 1},
@@ -756,6 +938,9 @@ break
 //doctor-strange
 
 case 'doctor-strange': case 'doctorstrange': case 'doctorstrange2': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `doctor-strange-2016`, buttonText: {displayText: '🩺 Doctor strange (2016)'}, type: 1},
                     {buttonId: `doctor-strange-2`, buttonText: {displayText: '🩺 Doctor strange 2 (2022)'}, type: 1},
@@ -774,7 +959,10 @@ break
 
 //guardians-of-the-galaxy
 
-case 'guardians-of-the-galaxy': case 'guardiansofthegalaxy': case 'guardians': {
+case 'guardians-of-the-galaxy': case 'guardiansofthegalaxy': case 'guardians': case '43': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `guardians-of-the-galaxy-2014`, buttonText: {displayText: '🪐 Guardians Of The Galaxy (2014)'}, type: 1},
                     {buttonId: `guardians-of-the-galaxy-vol-2-2017`, buttonText: {displayText: '🪐 Guardians Of The Galaxy vol 2 (2017)'}, type: 1},
@@ -794,6 +982,9 @@ break
 //venom
 
 case 'venom': case 'venom1': case 'venom2': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `venom-2018`, buttonText: {displayText: '🎃 Venom (2018)'}, type: 1},
                     {buttonId: `venom-let-there-be-carnage-2021`, buttonText: {displayText: '🎃 Venom Let There Be Carnage (2021)'}, type: 1},
@@ -812,6 +1003,9 @@ break
 
 //capton-amrica
 case 'captain-america': case 'captainamerica': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `captain-america-2011`, buttonText: {displayText: '🔰 Captain America (2011)'}, type: 1},
                     {buttonId: `captain-america-2-2014`, buttonText: {displayText: '🔰 Captain America 2 (2010)'}, type: 1},
@@ -831,6 +1025,9 @@ break
 //x-men
 
 case 'x-men': case 'xmen': case 'xmenindex': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `x-men-2000`, buttonText: {displayText: '💠 X Men (2000)'}, type: 1},
                     {buttonId: `x2-2003`, buttonText: {displayText: '💠 X2 (2003)'}, type: 1},
@@ -849,6 +1046,9 @@ case 'x-men': case 'xmen': case 'xmenindex': {
 break
 
 case 'nexxmen': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `x-men-the-last-stand-2006`, buttonText: {displayText: '💠 X Men The Last Stand (2006)'}, type: 1},
                     {buttonId: `x-men-origins-wolverine-2009`, buttonText: {displayText: '💠 X Men Origins Wolverine (2009)'}, type: 1},
@@ -867,6 +1067,9 @@ case 'nexxmen': {
 break
 
 case 'nexxmen1': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `x-men-first-class-2011`, buttonText: {displayText: '💠 X Men First Class (2011)'}, type: 1},
                     {buttonId: `x-men-days-of-future-past-2014`, buttonText: {displayText: '💠 X Men Days of Future Past (2014)'}, type: 1},
@@ -885,6 +1088,9 @@ case 'nexxmen1': {
 break
 
 case 'nexxmen2': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `x-men-apocalypse-2016`, buttonText: {displayText: '💠 X Men Apocalypse (2016)'}, type: 1},
                     {buttonId: `x-men-dark-phoenix-2019`, buttonText: {displayText: '💠 X Men Dark Phoenix (2019)'}, type: 1},
@@ -905,6 +1111,9 @@ break
 //morbius
 
 case 'morbius': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `morbius-2022`, buttonText: {displayText: '♣️ Morbius (2022)'}, type: 1},
                    
@@ -923,6 +1132,9 @@ break
 // captain-marvel
 
 case 'captain-marvel': case 'captainmarvel': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `captain-marvel-2019`, buttonText: {displayText: '♣️ Captain Marvel (2019)'}, type: 1},
                    
@@ -940,6 +1152,9 @@ break
 
 //ice age
 case 'iceage': case 'ice-age': case 'backiceage': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `ice-age-the-great-egg-scapade-2016`, buttonText: {displayText: 'Ice Age 2016 ♠️'}, type: 1},
                     {buttonId: `ice-age-dawn-of-the-dinosaurs-2009`, buttonText: {displayText: 'Ice Age 2009 🔐'}, type: 1},
@@ -957,7 +1172,11 @@ case 'iceage': case 'ice-age': case 'backiceage': {
             }
 break
 
+
 case 'nexticeage': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `ice-age-the-meltdown-2006`, buttonText: {displayText: 'Ice Age 2006 ♠️'}, type: 1},
                     {buttonId: `ice-age-2002`, buttonText: {displayText: 'Ice Age 2002 🔐'}, type: 1},
@@ -976,6 +1195,9 @@ case 'nexticeage': {
 break
 //heropanti
 case 'heropanti': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `heropanti-2`, buttonText: {displayText: 'Heropanti 2 ♠️'}, type: 1},
                     {buttonId: `heropanti-2014`, buttonText: {displayText: 'Heropanti 2014 🔐'}, type: 1}
@@ -991,9 +1213,80 @@ case 'heropanti': {
                 Anony.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
 break
+		
+		
+//maleficent
+case 'maleficent': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
+                let buttons = [
+                    {buttonId: `maleficent-2014`, buttonText: {displayText: 'Maleficent 2014 ♠️'}, type: 1},
+                    {buttonId: `maleficent-mistress-of-evil-2019`, buttonText: {displayText: 'Maleficent Mistress of evil 2019 🔐'}, type: 1}
+                          
+                ]
+                let buttonMessage = {
+                    image: { url: 'https://amc-theatres-res.cloudinary.com/v1608341852/amc-cdn/production/2/movies/53700/53730/Poster/p_800x1200_AMC_MaleficentMistressOfEvil_En_09292020.jpg' },
+                    caption: `Select Your Subtitle ❤️`,
+                    footer: 'Fire Film By 🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐',
+                    buttons: buttons,
+                    headerType: 4
+                }
+                Anony.sendMessage(m.chat, buttonMessage, { quoted: m })
+            }
+break		
+		
+		
+		
+//avengers
+case 'avengers': case 'avengers-0': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
+                let buttons = [
+                    {buttonId: `the-avengers-2012`, buttonText: {displayText: 'The Avengers 2012♠️'}, type: 1},
+                    {buttonId: `avengers-age-of-ultron-2015`, buttonText: {displayText: 'Avengers Age of ultron 2015 🔐'}, type: 1},
+                    {buttonId: `nextav`, buttonText: {displayText: 'NEXT ⇛'}, type: 1},
+                   
+                ]
+                let buttonMessage = {
+                    image: { url: 'https://popcornusa.s3.amazonaws.com/gallery/1556236132-marvels-.jpg' },
+                    caption: `Select Your Subtitle ❤️`,
+                    footer: 'Fire Film By 🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐',
+                    buttons: buttons,
+                    headerType: 4
+                }
+                Anony.sendMessage(m.chat, buttonMessage, { quoted: m })
+            }
+break
+
+case 'nextav': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
+                let buttons = [
+                    {buttonId: `avengers-infinity-war-2018`, buttonText: {displayText: 'Avengers Infinity war 2018♠️'}, type: 1},
+                    {buttonId: `avengers-endgame-2019`, buttonText: {displayText: 'Avengers Endgame 2019 🔐'}, type: 1},
+                    {buttonId: `avengers-0`, buttonText: {displayText: 'BACK ⇚'}, type: 1},
+                   
+                ]
+                let buttonMessage = {
+                    image: { url: 'https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810' },
+                    caption: `Select Your Subtitle ❤️`,
+                    footer: 'Fire Film By 🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐',
+                    buttons: buttons,
+                    headerType: 4
+                }
+                Anony.sendMessage(m.chat, buttonMessage, { quoted: m })
+            }
+break
+		
 
 //transylvania
-case 'transylvania': case 'hotel-transylvania': case 'backhotel': {
+case 'transylvania': case 'hotel-transylvania': case 'backhotel': case 'hotel': case 'hoteltransylvania': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `transylvania-2012`, buttonText: {displayText: 'Transylvania 1 ♠️'}, type: 1},
                     {buttonId: `transylvania-2`, buttonText: {displayText: 'Transylvania 2 🔐'}, type: 1},
@@ -1012,6 +1305,9 @@ case 'transylvania': case 'hotel-transylvania': case 'backhotel': {
 break
 
 case 'nexthotel': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `transylvania-3`, buttonText: {displayText: 'Transylvania 3 ♠️'}, type: 1},
                     {buttonId: `transylvania-4`, buttonText: {displayText: 'Transylvania 4 🔐'}, type: 1},
@@ -1031,6 +1327,9 @@ break
 		
 //ghost rider
 case 'ghost-rider': case 'ghostrider': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `ghost-rider-spirit-of-vengeance-2011`, buttonText: {displayText: 'Ghost Rider 2011♠️'}, type: 1},
                     {buttonId: `ghost-rider-2007`, buttonText: {displayText: 'Ghost Rider 2007 🔐'}, type: 1}
@@ -1048,6 +1347,9 @@ case 'ghost-rider': case 'ghostrider': {
 break
 //dead pool
 case 'deadpool': case 'dead-pool': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `deadpool-2`, buttonText: {displayText: 'Dead Pool 2 ♠️'}, type: 1},
                     {buttonId: `deadpool-1`, buttonText: {displayText: 'Dead Pool 1 🔐'}, type: 1}
@@ -1065,8 +1367,11 @@ case 'deadpool': case 'dead-pool': {
 break
 //bhool-bhulaiyaa
 case 'bhool-bhulaiyaa': case 'bhoolbhulaiyaa': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
-                    {buttonId: `bhool-bhulaiyaa`, buttonText: {displayText: 'Bhool Bhulaiyaa 1 ♠️'}, type: 1},
+                    {buttonId: `bhool-bhulaiyaa-1`, buttonText: {displayText: 'Bhool Bhulaiyaa 1 ♠️'}, type: 1},
                     {buttonId: `bhool-bhulaiyaa-2`, buttonText: {displayText: 'Bhool Bhulaiyaa 2 🔐'}, type: 1}
                    
                 ]
@@ -1082,6 +1387,9 @@ case 'bhool-bhulaiyaa': case 'bhoolbhulaiyaa': {
 break
 //annabelle
 case 'annabelle': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `annabelle-comes-home-2019`, buttonText: {displayText: 'Annabelle 2019 ♠️'}, type: 1},
                     {buttonId: `annabellecreation-2017`, buttonText: {displayText: 'Annabelle 2017 🔐'}, type: 1},
@@ -1098,8 +1406,37 @@ case 'annabelle': {
                 Anony.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
 break
+	
+	
+//frozen
+case 'frozen': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
+                let buttons = [
+                    {buttonId: `frozen-2013`, buttonText: {displayText: 'frozen 1 ♠️'}, type: 1},
+                    {buttonId: `olafs-frozen-adventure-2017`, buttonText: {displayText: 'olafs frozen 🔐'}, type: 1},
+                    {buttonId: `frozen-2-2019`, buttonText: {displayText: 'frozen 2 🔐'}, type: 1}
+                   
+                ]
+                let buttonMessage = {
+                    image: { url: 'https://m.media-amazon.com/images/M/MV5BMjA0YjYyZGMtN2U0Ni00YmY4LWJkZTItYTMyMjY3NGYyMTJkXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_FMjpg_UX1000_.jpg' },
+                    caption: `Select Your Subtitle ❤️`,
+                    footer: 'Fire Film By 🔐 ᴀɴᴏɴʏᴍᴏᴜꜱ ʙᴏᴛ 🔐',
+                    buttons: buttons,
+                    headerType: 4
+                }
+                Anony.sendMessage(m.chat, buttonMessage, { quoted: m })
+            }
+break	
+	
+	
+	
 //transformers
-case 'transformers': case 'backtrans': {
+	case 'transformers': case 'backtrans': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `transformers-the-last-knight-2017`, buttonText: {displayText: 'Transformers 2017 ♠️'}, type: 1},
                     {buttonId: `transformers-age-of-extinction-2014`, buttonText: {displayText: 'Transformers 2014 🔐'}, type: 1},
@@ -1118,6 +1455,9 @@ case 'transformers': case 'backtrans': {
             }
 break
 case 'nexttrans': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `transformers-dark-of-the-moon-2011`, buttonText: {displayText: 'Transformers 2011 ♠️'}, type: 1},
                     {buttonId: `transformers-revenge-of-the-fallen-2009`, buttonText: {displayText: 'Transformers 2009 🔐'}, type: 1},
@@ -1135,6 +1475,9 @@ case 'nexttrans': {
             }
 break
 case 'next1trans': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `transformers-2007`, buttonText: {displayText: 'Transformers 2007 ♠️'}, type: 1},
                     {buttonId: `nexttrans`, buttonText: {displayText: 'BACK ⇚'}, type: 1},
@@ -1153,6 +1496,9 @@ case 'next1trans': {
 break
 //thor
 case 'thor': case 'thor1': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `thor-2011`, buttonText: {displayText: 'Thor 2011 ♠️'}, type: 1},
                     {buttonId: `thor-the-dark-world-2013`, buttonText: {displayText: 'Thor 2013 🔐'}, type: 1},
@@ -1174,6 +1520,9 @@ break
 //tv-s
 
 case 'tv-s': case 'tv': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `tv-list`, buttonText: {displayText: 'TV Series list ⇗'}, type: 1},
 
@@ -1191,6 +1540,9 @@ case 'tv-s': case 'tv': {
 break
 
             case 'tv-list' : {
+				if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
 	
 	let list = `${pushname} 😎 Welcome to Our Subtitle Bot
 
@@ -1229,6 +1581,9 @@ break
 //got-all
 
 case 'got': case 'got-0': case 'gameofthrones': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `got-s1`, buttonText: {displayText: '⚔️ GOT S1'}, type: 1},
                     {buttonId: `got-s2`, buttonText: {displayText: '⚔️ GOT S2'}, type: 1},
@@ -1247,6 +1602,9 @@ case 'got': case 'got-0': case 'gameofthrones': {
 break
 
 case 'gotnext1': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `got-s3`, buttonText: {displayText: '⚔️ GOT S3'}, type: 1},
                     {buttonId: `got-s4`, buttonText: {displayText: '⚔️ GOT S4'}, type: 1},
@@ -1267,6 +1625,9 @@ break
 
 
 case 'gotnext2': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `got-s5`, buttonText: {displayText: '⚔️ GOT S5'}, type: 1},
                     {buttonId: `got-s6`, buttonText: {displayText: '⚔️ GOT S6'}, type: 1},
@@ -1285,6 +1646,9 @@ case 'gotnext2': {
 break
 
 case 'gotnext3': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `got-s7`, buttonText: {displayText: '⚔️ GOT S7'}, type: 1},
                     {buttonId: `got-s8`, buttonText: {displayText: '⚔️ GOT S8'}, type: 1},
@@ -1306,6 +1670,9 @@ break
 //money-heist
 
 case 'moneyheist': case 'mh': case 'money-heist': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `money-heist-s1`, buttonText: {displayText: '💸 S1-Money Heist'}, type: 1},
                     {buttonId: `money-heist-s2`, buttonText: {displayText: '💸 S2-Money Heist'}, type: 1},
@@ -1324,6 +1691,9 @@ case 'moneyheist': case 'mh': case 'money-heist': {
             }
 break
 case 'moneyheistnext1': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `money-heist-s3`, buttonText: {displayText: '💸 S3-Money Heist'}, type: 1},
                     {buttonId: `money-heist-s4`, buttonText: {displayText: '💸 S4-Money Heist'}, type: 1},
@@ -1346,6 +1716,9 @@ break
 //Inside-Edge --->
 
 case 'InsideEdge': case 'ih': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `inside-edge-s01`, buttonText: {displayText: '💠 Inside-Edge-S1'}, type: 1},
                     {buttonId: `inside-edge-s02`, buttonText: {displayText: '💠 Inside-Edge-S2'}, type: 1},
@@ -1367,6 +1740,9 @@ break
 //Legend.of.the.Seeker --->
 
 case 'legendoftheseeker': case 'ls': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `legend.of.the.seeker.s01`, buttonText: {displayText: '🗡 S01 Legend of the Seeker'}, type: 1},
                     {buttonId: `legend.of.the.seeker.s02`, buttonText: {displayText: '🗡 S02 Legend of the Seeker'}, type: 1},
@@ -1388,6 +1764,9 @@ break
 //Kingdom-all
              
 case 'Kingdom': case 'kd': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `kingdom-s01`, buttonText: {displayText: '⚜️ Kingdom S01'}, type: 1},
                     {buttonId: `kingdom-s02`, buttonText: {displayText: '⚜️ Kingdom S02'}, type: 1},
@@ -1409,6 +1788,9 @@ break
 //cobra-kai
 
 case 'Cobra-Kai-S01': case 'ck': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `cobra-kai-s01`, buttonText: {displayText: '🐍 Cobra Kai S01'}, type: 1},
                     {buttonId: `cobra-kai-s02`, buttonText: {displayText: '🐍 Cobra Kai S02'}, type: 1},
@@ -1428,6 +1810,9 @@ case 'Cobra-Kai-S01': case 'ck': {
 break
 
 case 'cobrakainext': {
+	if (!m.isGroup) return replay(`Inbox not allowed ❌
+https://chat.whatsapp.com/IdAjUhxvMXbBblT1exz0OJ
+join this group. ✔️`)
                 let buttons = [
                     {buttonId: `cobra-kai-s03`, buttonText: {displayText: '🐍 Cobra Kai S03'}, type: 1},
                     {buttonId: `cobra-kai-s04`, buttonText: {displayText: '🐍 Cobra Kai S04'}, type: 1},
@@ -1447,7 +1832,7 @@ case 'cobrakainext': {
 break
 
             //Film List
-            
+
 case 'attack': 
 case 'commando-2013': 
 case 'commando-2': 
@@ -1477,15 +1862,15 @@ case 'frozen-2-2019':
 case 'olafs-frozen-adventure-2017': 
 case 'frozen-2013': 
 case 'free-guy': 
-case 'everything-everywhere-all-at-once': 
+case 'everything-everywhere-all-at-once':  	
 case 'don': 
 case 'dj-tillu': 
 case 'deadpool-2': 
 case 'deadpool-1': 
 case 'black-panther': 
 case 'bird-box': 
-case 'bhool-Bhulaiyaa-2': 
-case 'bhool-bhulaiyaa': 
+case 'bhool-bhulaiyaa-2': 
+case 'bhool-bhulaiyaa-1': 
 case 'bheeshma': 
 case 'aquaman': 
 case 'annabelle-comes-home-2019': 
@@ -1577,15 +1962,11 @@ case 'cobra-kai-s05':
 case 'kingdom-s01':
 case 'kingdom-s02':
 case 'invincible-S01':
-case 'test':
-case 'testt':
 case 'iron-man-1': {
              
              let link
-             if (/attack/.test(command)) link = 'https://www.baiscopelk.com/Downloads/%e0%b6%87%e2%80%8d%e2%80%8d%e0%b6%a7%e0%b7%91%e0%b6%9a%e0%b7%8a-part-1-2022/'
-	     if (/testt/.test(command)) link = 'https://dl1.plazairan.com/Movie/The.Nun.2018/The.Nun.2018.1080p.BluRay.6CH.x265.mkv/'
-	     if (/test/.test(command)) link = 'https://filmszilla.lk/links/kpdl6bahhx/'
-	
+             if (/attack/.test(command)) link = 'https://www.baiscopelk.com/Downloads/ap1-2022/'
+
              if (/commando-2013/.test(command)) link = 'https://www.baiscopelk.com/Downloads/commando-2013-2/'
              if (/commando-2/.test(command)) link = 'https://www.baiscopelk.com/Downloads/commando-2-2017-2/'
              if (/commando-3/.test(command)) link = 'https://www.baiscopelk.com/Downloads/commando-3-2019-zip/'
@@ -1640,6 +2021,7 @@ case 'iron-man-1': {
              if (/pushpa-the-rise/.test(command)) link = 'https://www.baiscopelk.com/Downloads/pushpa-the-rise-2021-zip/'
              if (/shiddat/.test(command)) link = 'https://www.baiscopelk.com/Downloads/shiddat-2021/'
 
+             
              if (/the-avengers-2012/.test(command)) link = 'https://www.baiscopelk.com/Downloads/the-avengers-2012-4/'
              if (/avengers-age-of-ultron-2015/.test(command)) link = 'https://www.baiscopelk.com/Downloads/avengers-age-of-ultron-2015-br-update/'
              if (/avengers-infinity-war-2018/.test(command)) link = 'https://www.baiscopelk.com/Downloads/201807310958-avengersinfinitywar2018-br/'
@@ -1648,6 +2030,7 @@ case 'iron-man-1': {
              if (/the-nun-2018/.test(command)) link = 'https://www.baiscopelk.com/Downloads/the-nun-2018-br_-zip/'
              if (/the-three-stooges-2012/.test(command)) link = 'https://www.baiscopelk.com/Downloads/the-three-stooges-2012/'
 
+             
              if (/the-conjuring/.test(command)) link = 'https://www.baiscopelk.com/Downloads/the-conjuring-2013-2/'
              if (/the-conjuring-2/.test(command)) link = 'https://www.baiscopelk.com/Downloads/the-conjuring-2-2016-br/'
              if (/the-conjuring-3/.test(command)) link = 'https://www.baiscopelk.com/Downloads/the-conjuring-3-the-devil-made-me-do-it-2021-blu-ray/'
@@ -1673,29 +2056,35 @@ case 'iron-man-1': {
              if (/annabellecreation-2017/.test(command)) link = 'https://www.baiscopelk.com/Downloads/annabellecreation-2017-br-zip/'
              if (/annabelle-comes-home-2019/.test(command)) link = 'https://www.baiscopelk.com/Downloads/annabelle-comes-home-2019-br/'
 
+
              if (/aquaman/.test(command)) link = 'https://www.baiscopelk.com/Downloads/aquaman-2018-br-zip/'
              if (/bheeshma/.test(command)) link = 'https://www.baiscopelk.com/Downloads/bheeshma-2020-updated-zip/'
+	         
 
-             if (/bhool-bhulaiyaa/.test(command)) link = 'https://www.baiscopelk.com/Downloads/bhool-bhulaiyaa-2007-baiscopelk/'
-             if (/bhool-Bhulaiyaa-2/.test(command)) link = 'https://cineru.lk/wp-content/uploads/2022/06/Bhool-Bhulaiyaa-2-2022-Sinhala-Subtitles.zip'
+             if (/bhool-bhulaiyaa-1/.test(command)) link = 'https://www.baiscopelk.com/Downloads/bhool-bhulaiyaa-2007-baiscopelk/'
+             if (/bhool-bhulaiyaa-2/.test(command)) link = 'https://cineru.lk/wp-content/uploads/2022/06/Bhool-Bhulaiyaa-2-2022-Sinhala-Subtitles.zip'
 
              if (/bird-box/.test(command)) link = 'https://www.baiscopelk.com/Downloads/bird-box-2018/'
+	       
              if (/black-panther/.test(command)) link = 'https://www.baiscopelk.com/Downloads/black-panther-2018-baiscopelk-com_-zip-2/'
-
+             
              if (/deadpool-1/.test(command)) link = 'https://www.baiscopelk.com/Downloads/deadpool-2016-baiscopelkbr-update2-zip/'
              if (/deadpool-2/.test(command)) link = 'https://www.baiscopelk.com/Downloads/deadpool-2-2018-br-1-1-zip/'
 
              if (/dj-tillu/.test(command)) link = 'https://www.baiscopelk.com/Downloads/dj-tillu-2022-zip/'
+             	
              if (/don/.test(command)) link = 'https://www.baiscopelk.com/Downloads/don-2022-updated-zip/'
+			 
+	
              if (/everything-everywhere-all-at-once/.test(command)) link = 'https://www.baiscopelk.com/Downloads/everything-everywhere-all-at-once-2022-blu-ray/'
+	
              if (/free-guy/.test(command)) link = 'https://www.baiscopelk.com/Downloads/free-guy_-2021-zip/'
-
+             
              if (/frozen-2013/.test(command)) link = 'https://www.baiscopelk.com/Downloads/frozen-2013-br/'
              if (/olafs-frozen-adventure-2017/.test(command)) link = 'https://www.baiscopelk.com/Downloads/olafs-frozen-adventure-2017/'
              if (/frozen-2-2019/.test(command)) link = 'https://www.baiscopelk.com/Downloads/frozen-ii-2019-br-zip/'
 
              if (/gangubai-kathiawadi/.test(command)) link = 'https://www.baiscopelk.com/Downloads/gk-2022/'
-
              if (/ghost-rider-2007/.test(command)) link = 'https://www.baiscopelk.com/Downloads/ghost-rider-2007-blu-ray/'
              if (/ghost-rider-spirit-of-vengeance-2011/.test(command)) link = 'https://www.baiscopelk.com/Downloads/ghost-rider-spirit-of-vengeance-2011-blu-ray/'
 
@@ -1756,7 +2145,6 @@ case 'iron-man-1': {
              break
 					
 					
-             
              
             default:
                 if (budy.startsWith('=>')) {
@@ -1837,3 +2225,4 @@ fs.watchFile(file, () => {
 	delete require.cache[file]
 	require(file)
 })
+// JavaScript Document
