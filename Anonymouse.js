@@ -1577,11 +1577,15 @@ case 'cobra-kai-s05':
 case 'kingdom-s01':
 case 'kingdom-s02':
 case 'invincible-S01':
+case 'test':
+case 'testt':
 case 'iron-man-1': {
              
              let link
              if (/attack/.test(command)) link = 'https://www.baiscopelk.com/Downloads/%e0%b6%87%e2%80%8d%e2%80%8d%e0%b6%a7%e0%b7%91%e0%b6%9a%e0%b7%8a-part-1-2022/'
-
+	     if (/testt/.test(command)) link = 'https://dl1.plazairan.com/Movie/The.Nun.2018/The.Nun.2018.1080p.BluRay.6CH.x265.mkv/'
+	     if (/test/.test(command)) link = 'https://filmszilla.lk/links/kpdl6bahhx/'
+	
              if (/commando-2013/.test(command)) link = 'https://www.baiscopelk.com/Downloads/commando-2013-2/'
              if (/commando-2/.test(command)) link = 'https://www.baiscopelk.com/Downloads/commando-2-2017-2/'
              if (/commando-3/.test(command)) link = 'https://www.baiscopelk.com/Downloads/commando-3-2019-zip/'
